@@ -1,0 +1,60 @@
+[package]
+name = "df-lighter-core"
+description = "Lighter SDK for Rust: markets, account, trading, transfers, pools and binary options on Lighter and on Robinhood Chain, with exact decimals and the API key signer in Rust. Native and wasm."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+readme.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json = { workspace = true, features = ["raw_value"] }
+thiserror.workspace = true
+keccak.workspace = true
+zeroize.workspace = true
+k256 = { workspace = true, optional = true }
+getrandom02 = { workspace = true, optional = true }
+reqwest = { workspace = true, optional = true }
+tokio = { workspace = true, optional = true, features = ["rt", "sync", "time", "macros", "net"] }
+tokio-tungstenite = { workspace = true, optional = true }
+# The lock one client's transactions take turns on, and the native websocket's sink.
+futures-util.workspace = true
+wasm-bindgen = { workspace = true, optional = true }
+wasm-bindgen-futures = { workspace = true, optional = true }
+js-sys = { workspace = true, optional = true }
+web-sys = { workspace = true, optional = true, features = ["CloseEvent", "Headers", "MessageEvent", "RequestInit", "Response", "WebSocket"] }
+
+[features]
+default = ["sign", "native"]
+# Signing: randomness for Schnorr nonces and new API keys, and secp256k1 for the owner's wallet.
+# Without it, transactions build and hash but nothing signs.
+sign = ["dep:k256", "dep:getrandom02"]
+# HTTP and websocket for native programs (reqwest, tokio-tungstenite).
+native = ["dep:reqwest", "dep:tokio", "dep:tokio-tungstenite"]
+# HTTP and websocket for the browser and Workers (fetch, WebSocket).
+web = ["dep:wasm-bindgen", "dep:wasm-bindgen-futures", "dep:js-sys", "dep:web-sys"]
+# The transports refuse whatever is signed: a `sendTx`, a `sendTxBatch`, a fast withdrawal and a
+# raw EVM transaction come back as `TransportError::Offline` before anything goes out. For a
+# dependent's test build, as a dev-dependency feature, so no test can move money.
+offline = []
+
+[target.'cfg(not(target_arch = "wasm32"))'.dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
+
+[target.'cfg(target_arch = "wasm32")'.dev-dependencies]
+wasm-bindgen-test.workspace = true
+
+[[example]]
+name = "market_order"
+required-features = ["native"]
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

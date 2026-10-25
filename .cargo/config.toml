@@ -1,0 +1,3 @@
+# Wasm tests run in Node through wasm-bindgen's runner, which must match the pinned wasm-bindgen.
+[target.wasm32-unknown-unknown]
+runner = "wasm-bindgen-test-runner"

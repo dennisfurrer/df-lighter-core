@@ -1,0 +1,2648 @@
+{
+  "source": "lighter-go 01933021 (types.Construct*Tx, types.ConstructAuthToken, client.GenerateAPIKey) and go-ethereum 1.15.6 (accounts.TextHash, crypto.Sign, abi, types.SignTx), run natively by vectors/gen",
+  "random": "crypto/rand.Reader replaced by sha256(\"df-lighter-core|\" + n) blocks; each case lists the reads it took, as hex",
+  "now_ms": 1790000000000,
+  "keys": {
+    "a": {
+      "draws": [
+        "b85753197004f50ce9b406c46001df38b0077a7ee02013bd638e7b6b4782a2cb211f906432ac00ac"
+      ],
+      "private_key": "0xac00ac3264901f21cba282476b7b8e63bd1320e07e7a07b038df0160c406b4e90cf5047019535738",
+      "public_key": "0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889"
+    },
+    "b": {
+      "draws": [
+        "5d5f650824ba7f577c6bf1ff6c6c88bbe7fe9889d0fd0e0158c2cbcb575fd3292549bdedffe27cf8"
+      ],
+      "private_key": "0xf87ce2ffedbd492529d35f57cbcbc258010efdd08998fee7bb886c6cfff16b7c577fba2408655f5d",
+      "public_key": "0xfcd2e59ef744408afd790830b6ef8fb7499af7e9701dd1704fc9ab40ceb9c3313b657054bcbb4c30"
+    }
+  },
+  "wallet": {
+    "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "private_key": "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+  },
+  "cases": [
+    {
+      "name": "limit-buy-gtt",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 1790000000000,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "7bea1ecf0ef0798dd2028f034662cfddc1aac688d68a861d5981ae6b89c7ef09946f765351b49cae"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":1790000000000,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"Pzbil4LXan1ZsPATYCAwM8Zr9m24+8+eg+8qumZmpwRwc8lmluuJMX97aPRuICWKwRMeVq4x5GwlfGmlPgoRSTHt7WwV+SS87JCXmRZsbjg=\",\"L2TxAttributes\":null}",
+        "tx_hash": "7c54d1d44f08fdaf7a2b3d4fb2f94b98b74d36d1bf8c7cfcf3e53c2d3e5f87defc7ccf2ad53b14a3"
+      }
+    },
+    {
+      "name": "limit-sell-post-only",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 1,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 500,
+        "ClientOrderIndex": 7,
+        "IsAsk": 1,
+        "MarketIndex": 0,
+        "OrderExpiry": 1792419200000,
+        "Price": 310000,
+        "ReduceOnly": 0,
+        "TimeInForce": 2,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "4a30bd05447b111cf688f7553e3e74c06213a854a37988c5eb436e935f4de736b375e1d34bb691b0"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"ClientOrderIndex\":7,\"BaseAmount\":500,\"Price\":310000,\"IsAsk\":1,\"Type\":0,\"TimeInForce\":2,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":1,\"Sig\":\"g1bQl0/EnAxmLYgGAYR8GB4x3nGLxBzzPWrJOLfzUaaB9ANCJPHvFhnF4hdiO6+wtxAT3Z1w0w7kj+yRIV/A+78axTTlZLspifRHcmOheXI=\",\"L2TxAttributes\":null}",
+        "tx_hash": "f5772dc2434ae38ae51835ca3731bf136c130df3d96133c07c48a9132a0e56b47639dc6eb8006bd6"
+      }
+    },
+    {
+      "name": "limit-ioc",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 2,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 500,
+        "ClientOrderIndex": 8,
+        "IsAsk": 0,
+        "MarketIndex": 0,
+        "OrderExpiry": 0,
+        "Price": 310000,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "7187ce0ac8dc85b7298f5a87f8d5135a623a15afd86d7d26d60cd4c15730d6dde0b4621ef00a74db"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"ClientOrderIndex\":8,\"BaseAmount\":500,\"Price\":310000,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":2,\"Sig\":\"jxvj7LroVYCkSI5xxxDfgtUNp5A3coigcnEUlQeiPhuROr1PYYbNfeyaQWS+ovObHV2BPH52iMEGQ5l2gvNuPVX739CM0UXSQbOQknOFXUk=\",\"L2TxAttributes\":null}",
+        "tx_hash": "58010acc633e098ac3ace33b8e8c0e5c2d7bc743ad2335aaad78322887bfc665db3ccaa2df5a1687"
+      }
+    },
+    {
+      "name": "market-buy",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 3,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 9,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 0,
+        "Price": 851000,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 1
+      },
+      "draws": [
+        "3b030dfaa3dcd4e7e2acf0523f9c4fbf05051286cbbdf63dee9c2cb154b7b9d827099a46d9364586"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":9,\"BaseAmount\":20,\"Price\":851000,\"IsAsk\":0,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":3,\"Sig\":\"R+Espq2mlen0eUoIZYNyhdgrecyvlt/523w1OdBYlKYmRV2+2jWNIkzJGis/XkgE+ljeOx05l2m1xcrknOEmRFYfN7ZryOk6v/W+9sjc5mw=\",\"L2TxAttributes\":null}",
+        "tx_hash": "f315152f5a529be29fede8e03462b81442bd75e3793cba1c9426e2efb5c97b78e8bf559ac5069dbb"
+      }
+    },
+    {
+      "name": "market-sell-reduce-only",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 4,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 10,
+        "IsAsk": 1,
+        "MarketIndex": 1,
+        "OrderExpiry": 0,
+        "Price": 817000,
+        "ReduceOnly": 1,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 1
+      },
+      "draws": [
+        "5af4622c51ccfec15c19354788e35d674fabc9f58b6b1718f804f2c7856f61946264bbdac3ea6081"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":10,\"BaseAmount\":20,\"Price\":817000,\"IsAsk\":1,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":0,\"OrderExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":4,\"Sig\":\"aDGU7/HxQ2vol/PeooYkn9txrkUbwx4T7adv4QPCXGe/UecBZgsnQzPVrC9IEPqQjYjpwdpkJnMYUNlzBrWjPQS9YjuJ+naoZXsCy0o0KUQ=\",\"L2TxAttributes\":null}",
+        "tx_hash": "852f9b885e4e1b5984a5cff55d5472d8207a8a091f352bb06e5f7960ba52f6f70b4d237e14b9bac7"
+      }
+    },
+    {
+      "name": "stop-loss",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 5,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 11,
+        "IsAsk": 1,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 784000,
+        "ReduceOnly": 1,
+        "TimeInForce": 0,
+        "TriggerPrice": 800000,
+        "Type": 2
+      },
+      "draws": [
+        "2bd12df2eca8d535ae73187464cbfa2bd6d2227951365e33850a3cff26ad8775ef77bbc6b3fa6a66"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":11,\"BaseAmount\":20,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":5,\"Sig\":\"LswVf9z2F61X03jP3KTNWOdjkeyQHaCVuHD3zPU+PBNYJKzcDrTVLUxz9u/BCzYePDIHTHvlzneHTQbiyYfQ8m0LhJJPm+xtLVAUQ5ehixc=\",\"L2TxAttributes\":null}",
+        "tx_hash": "eb04a707e9611e74fb0f03498762589b0b6b54d6fe140959e733f4f512761646aa1adf7d32907afc"
+      }
+    },
+    {
+      "name": "stop-loss-limit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 6,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 12,
+        "IsAsk": 1,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 799000,
+        "ReduceOnly": 1,
+        "TimeInForce": 1,
+        "TriggerPrice": 800000,
+        "Type": 3
+      },
+      "draws": [
+        "c52ff9f4d5c2d74348d7a5fe5e8562784ab13f269f70e591fea6b0391fa351f5ea669952593f3e83"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":12,\"BaseAmount\":20,\"Price\":799000,\"IsAsk\":1,\"Type\":3,\"TimeInForce\":1,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":6,\"Sig\":\"MoywW2bQV/GQ0MHexNhiZWPwOKMHdBywLuzSqvJEqK1iQDL+a8xPVDZ96Yqj33iuAjUOHrU0zezSZGFwVqhMjn6ak6ysMzCMdyAO8SmMuFQ=\",\"L2TxAttributes\":null}",
+        "tx_hash": "e2682f4003d3fd9959a3679f52a7f600a60c9efc0af785b1e3598e17cdc149dbd6947fff188ef02d"
+      }
+    },
+    {
+      "name": "take-profit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 7,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 13,
+        "IsAsk": 1,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 882000,
+        "ReduceOnly": 1,
+        "TimeInForce": 0,
+        "TriggerPrice": 900000,
+        "Type": 4
+      },
+      "draws": [
+        "e697ac07685753b339d6278ef0abefd82c4f13d1975ea8de778927ea74134170113184bf5c3aace7"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":13,\"BaseAmount\":20,\"Price\":882000,\"IsAsk\":1,\"Type\":4,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":7,\"Sig\":\"26rcQLDXlnw55saBAzIOLS8fn3n/3H0TpIy17qNA2XAAeKyh5QwnMmRa+NILz0wsGrWdNMZFViKqbES06ystYa5Y32v4Hq4CEIznPWxE3WY=\",\"L2TxAttributes\":null}",
+        "tx_hash": "0bbc2bcd5d745db963ee26d4c58c74c70fdc0818a66c1a52344fcd1a3ab54a75950aa5a1d0b1b81e"
+      }
+    },
+    {
+      "name": "take-profit-limit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 8,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "ClientOrderIndex": 14,
+        "IsAsk": 1,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 901000,
+        "ReduceOnly": 1,
+        "TimeInForce": 1,
+        "TriggerPrice": 900000,
+        "Type": 5
+      },
+      "draws": [
+        "5d198b1268bcd702c9f6eecb69a3d945a976cea6ef6bc9f12f52024d6d6f43085e33cca86b9d0bcc"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":14,\"BaseAmount\":20,\"Price\":901000,\"IsAsk\":1,\"Type\":5,\"TimeInForce\":1,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":8,\"Sig\":\"rleUbqNANW+PvqdNwVlTN+9FXyb7AkMHqqZgAMZrA1b4P2S9/IDmfUweLRYuF0cj8rBpXflOdtzHpbmmyNKUQV0WhFlw5TkKgDx5Ttb4wHM=\",\"L2TxAttributes\":null}",
+        "tx_hash": "73a3ed35d92275c051943051731d84d0bed3c04c64a74149504782f9d48fb1eea927b7cf7d4984b9"
+      }
+    },
+    {
+      "name": "twap",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 9,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 15,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1790003600000,
+        "Price": 900000,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 6
+      },
+      "draws": [
+        "d876ffbc3209d6e5ff26db2d8c7d319102e91161387042f8a02acf4bc2784bcdb200e841ba721a2b"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":15,\"BaseAmount\":1000,\"Price\":900000,\"IsAsk\":0,\"Type\":6,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1790003600000,\"ExpiredAt\":1790000599000,\"Nonce\":9,\"Sig\":\"3QMzQVl8TRHZD2GFEqr3QbmFOTcna+QLUyznhypCQDdR/MrxBFdLVf+LW2V3+ooSwaNQ/Od90nM5BBbMjYfMAECcdzbGr4tYiOcK/dRu5Bw=\",\"L2TxAttributes\":null}",
+        "tx_hash": "faeb0d68352d57bb72c55290298f05760e92302e994340d383e3ef28cd9417957122ff6b26e567d1"
+      }
+    },
+    {
+      "name": "no-client-index",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 10,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 0,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "bd2e104cf24405161b0acef8c214df4f797b417efb531ee77b06a8f9e3fe080bcaef8f640caa623e"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":0,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":10,\"Sig\":\"jxb4utBF43++TNQ0i3lUVsqkAkWmp6mvdRIunLAIp3tD0FqRwVZdaVMV5Ys4m93XF/IMFrGhY1iXK6JD4tHn93AfFcmOjDBWHq7Zch7laBw=\",\"L2TxAttributes\":null}",
+        "tx_hash": "850c87e6c87704bd0c6f3f6ecd3c4c257ff6d4ab7fb0116a846a68924feccc91654e321fd68f8f69"
+      }
+    },
+    {
+      "name": "spot-market-2048",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 11,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 16,
+        "IsAsk": 0,
+        "MarketIndex": 2048,
+        "OrderExpiry": 1792419200000,
+        "Price": 231000,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "58b9b691419846ab0187bd784538f2f675028f3a9d71472a34e47429e2e320120942a5bec49244d3"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":2048,\"ClientOrderIndex\":16,\"BaseAmount\":1000,\"Price\":231000,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":11,\"Sig\":\"fH9xP/MY1dbkvHxRSZvSY2wW3EQXpMEda1Du1rOo+WlAXnVUs7u9RsbtnUMWei+cvm+GJJIHosSwGqOK68xd8++gm61AMYMSqR8k3jz0uG0=\",\"L2TxAttributes\":null}",
+        "tx_hash": "4f1d0490fadb008fd438a68c40a4975a1eaa7cb801791580c869882cc4a595b2e7a94c9cc0bebde1"
+      }
+    },
+    {
+      "name": "binary-option-4206",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 12,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000000,
+        "ClientOrderIndex": 17,
+        "IsAsk": 0,
+        "MarketIndex": 4206,
+        "OrderExpiry": 1792419200000,
+        "Price": 51,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "0ce97716b0cfaf1b457878ae5941e01497484ed87077e529fd21ad4fcb3a1ffaa776a755e9c99c4e"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":4206,\"ClientOrderIndex\":17,\"BaseAmount\":1000000,\"Price\":51,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":12,\"Sig\":\"N2aKVsWWxKun+NqdN/eroDioqHwFF0GHeViUcAyxu1ATmBYl/2uhKrDfLSb+PqBwwvnDeD0zDpnATtPey0qJ6ytY3Pu3KWihs615IMyORRc=\",\"L2TxAttributes\":null}",
+        "tx_hash": "157fc38d0e8b5fc83809f195fda93867a75021c8c4818db24f12da780646824d7ea38c20b828731d"
+      }
+    },
+    {
+      "name": "widest-integers",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 13,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 281474976710655,
+        "ClientOrderIndex": 281474976710655,
+        "IsAsk": 1,
+        "MarketIndex": 281474976710655,
+        "OrderExpiry": 281474976710655,
+        "Price": 4294967295,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "53d72fc74e12d4284dfb0291803f66f37f0b3fe4681312eaed5cf1977de0521ce0711375a7821e96"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":281474976710655,\"ClientOrderIndex\":281474976710655,\"BaseAmount\":281474976710655,\"Price\":4294967295,\"IsAsk\":1,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":281474976710655,\"ExpiredAt\":1790000599000,\"Nonce\":13,\"Sig\":\"AjeO4GSen4UfK7w2ZcLhevGxNNvq248eH3hSosTU2nhtkuV9UAjFOXGqSm6HVF9y9IQJgw3ECMMqtrV4v9ePtNpYXzhIaZoayva2LyQpTlk=\",\"L2TxAttributes\":null}",
+        "tx_hash": "ff240ff3d49c24149afdcfa27dc0c810bd610f41596d51ef5fdc162ffcdbbe57b87cf2ed7a873d4e"
+      }
+    },
+    {
+      "name": "integrator-fees",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 14,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 18,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "attributes": {
+        "1": 713888,
+        "2": 500,
+        "3": 200
+      },
+      "draws": [
+        "3b8e8e9fcb1d68e4b95a07c8df22020f04eea41a6b8019a129a865358792a78a45de09b1e59463b1"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":18,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":14,\"Sig\":\"tJpR6LMe5jnjzAzxOuNaPS+L1rXj+Xgoj6dOdJSo3ggNhIGSFPzpepgteUpS6dDkmDI41ElSD+80NamVCAnNXNB8X3lPi8vICp8lNpuH6GE=\",\"L2TxAttributes\":{\"1\":713888,\"2\":500,\"3\":200}}",
+        "tx_hash": "50297a08bad2cfa843cc89c09bbfdd4fe07e05dcfcb2d42c123636a0a53f3ca07db0a167ca01c3c5"
+      }
+    },
+    {
+      "name": "integrator-tracking-only",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 15,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 19,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "attributes": {
+        "1": 713888
+      },
+      "draws": [
+        "b6ee73034fea81ed11c0c0908afbc932956d254accbca1d0b695aba35ef897c39735be142c709431"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":19,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":15,\"Sig\":\"v45/tEbZpyIsy3qWOnOFenpHQ6lzVMvFpg5k8uXnsAKxMx3aqUiSBmMOc9ZZMiqz3nkpTavyRNiGeAZBI0jBg89YXl2o2FupCEu8rbY43hI=\",\"L2TxAttributes\":{\"1\":713888}}",
+        "tx_hash": "36a9d0aa89a915c19f784970b6092e3e02be0e884d0acdade2a7d3d8f9aaafb3eab5c2d998703633"
+      }
+    },
+    {
+      "name": "self-trade-modes",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 16,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 20,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "attributes": {
+        "6": 2,
+        "7": 1
+      },
+      "draws": [
+        "12a005b62a19380dae6e075ef9545d91eeb8846adf2d0f7a7d9d9b64720bcc890156e40569f8fb97"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":20,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":16,\"Sig\":\"rAoZZpJ2YBLzxXaAIO4u3g6tf8rT3SBfY6jYK0lIpyECAlrfYgNZSiTntfTb4KVYCiVsh74bKcq+fptrjscWKpwJrtgs0x8/JnjPdsQNE1A=\",\"L2TxAttributes\":{\"6\":2,\"7\":1}}",
+        "tx_hash": "9a0126982213b7ad050e8f99be8718f9d8bb90660a23d4ca6993ef7e659b9538bc74c3ae31e0cf11"
+      }
+    },
+    {
+      "name": "skip-nonce",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 1000,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1000,
+        "ClientOrderIndex": 21,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 834530,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "attributes": {
+        "4": 1
+      },
+      "draws": [
+        "3728279a412c66df4c79cc5c3151efa94d59e169151c060ed05d2368257e3903e563417b3744b773"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"ClientOrderIndex\":21,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":1000,\"Sig\":\"tpFOo5z7ya4x/v3Co+rViFjrSqsiIEH1J6+aGK8dbh45+fL2ul+AUbm34186/elprTVS3aZQIuCi9WqnoswF9dQ30MWho21TtLfzvw6lmko=\",\"L2TxAttributes\":{\"4\":1}}",
+        "tx_hash": "d781145f842bf7f26859046df6c3d4b96fef064f36cf1a47244f9c47e3ded3c8e37cbba9bdc74c9f"
+      }
+    },
+    {
+      "name": "robinhood-limit",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 100,
+        "ClientOrderIndex": 1,
+        "IsAsk": 0,
+        "MarketIndex": 16,
+        "OrderExpiry": 1792419200000,
+        "Price": 25012,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "draws": [
+        "f2f8c716d4370fb2383403f0afcbd4993067ef03b5ad336585dd3154947b967d9821c90a8641dbd4"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":100002,\"ApiKeyIndex\":254,\"MarketIndex\":16,\"ClientOrderIndex\":1,\"BaseAmount\":100,\"Price\":25012,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000,\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"7G7qfPeo6aixKAkWj6dwjoY7BsG9LHltXWuhfs21VLMmmrFt/QY4DbYs22BDtlfxm/smrXywJkUvCbKKtfyhVzTizSOao/E9I0Eocg+pnwg=\",\"L2TxAttributes\":null}",
+        "tx_hash": "5ab01d3915b9a68ba08eae322fea634b480052f9ee333a284c78984ef23eeabfc105a3d8e58c2cfd"
+      }
+    },
+    {
+      "name": "sub-account-market",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "b",
+        "account_index": 281474976710600,
+        "api_key_index": 5
+      },
+      "expired_at": 1790000599000,
+      "nonce": 3,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 50,
+        "ClientOrderIndex": 22,
+        "IsAsk": 0,
+        "MarketIndex": 0,
+        "OrderExpiry": 0,
+        "Price": 320000,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 1
+      },
+      "draws": [
+        "d62347b7ed225f9e7eea8b51934c2933fe490295e2f238de7573454b1f0f776b2fc9d688a076d749"
+      ],
+      "out": {
+        "tx_type": 14,
+        "tx_info": "{\"AccountIndex\":281474976710600,\"ApiKeyIndex\":5,\"MarketIndex\":0,\"ClientOrderIndex\":22,\"BaseAmount\":50,\"Price\":320000,\"IsAsk\":0,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":3,\"Sig\":\"HA6fcw32mMHkCO7+TYztq3nUXyPjB+09AZKYrj/QOkki0tw80bZLBtqA4FFSH7h0y/q89OwoPtAoJKao6+FhmqxuKqrrteDdeRqdY+j93W0=\",\"L2TxAttributes\":null}",
+        "tx_hash": "9b37e89c0430e3b6c1e9502fe836f0a210282f8a91addc5a08438a6aff2c9ceb30712f2bf140fb10"
+      }
+    },
+    {
+      "name": "refused-market-255",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1,
+        "ClientOrderIndex": 0,
+        "IsAsk": 0,
+        "MarketIndex": 255,
+        "OrderExpiry": 0,
+        "Price": 1,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "error": "MarketIndex is not valid"
+    },
+    {
+      "name": "refused-zero-size",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 0,
+        "ClientOrderIndex": 0,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 0,
+        "Price": 1,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "error": "BaseAmount should not be less than 1"
+    },
+    {
+      "name": "refused-market-gtt",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1,
+        "ClientOrderIndex": 0,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 1792419200000,
+        "Price": 1,
+        "ReduceOnly": 0,
+        "TimeInForce": 1,
+        "TriggerPrice": 0,
+        "Type": 1
+      },
+      "error": "OrderTimeInForce is not valid"
+    },
+    {
+      "name": "refused-fees-and-self-trade",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateOrder",
+      "fields": {
+        "BaseAmount": 1,
+        "ClientOrderIndex": 0,
+        "IsAsk": 0,
+        "MarketIndex": 1,
+        "OrderExpiry": 0,
+        "Price": 1,
+        "ReduceOnly": 0,
+        "TimeInForce": 0,
+        "TriggerPrice": 0,
+        "Type": 0
+      },
+      "attributes": {
+        "1": 1,
+        "2": 1,
+        "6": 1
+      },
+      "error": "Self-trade specification isn't allowed with integrator fees"
+    },
+    {
+      "name": "oto-entry-and-stop",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 20,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 1,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 30,
+            "IsAsk": 0,
+            "MarketIndex": 1,
+            "OrderExpiry": 0,
+            "Price": 851000,
+            "ReduceOnly": 0,
+            "TimeInForce": 0,
+            "TriggerPrice": 0,
+            "Type": 1
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "draws": [
+        "de58263ad24d0cecf9e3f12cfaf5ea1cb8a1f2cc0e3067266a3d2008023620bec788a73ee217f78b"
+      ],
+      "out": {
+        "tx_type": 28,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"GroupingType\":1,\"Orders\":[{\"MarketIndex\":1,\"ClientOrderIndex\":30,\"BaseAmount\":1000,\"Price\":851000,\"IsAsk\":0,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0},{\"MarketIndex\":1,\"ClientOrderIndex\":31,\"BaseAmount\":0,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000}],\"ExpiredAt\":1790000599000,\"Nonce\":20,\"Sig\":\"fZ7k8pYaakKiqM3raIdybFd7UgrSbzAkYsV1h5LKi3iUCpkTiejfW+IME1TsB+xptHEFrlbTuP+X4TL4p0+nKLYJWS9CQc7KQlaWHjWQBB8=\",\"L2TxAttributes\":null}",
+        "tx_hash": "31a88dd5761b4ffc6104353b71bf016faa63098e150809a5890b3fbb7ee6007a99db1a7824026c38"
+      }
+    },
+    {
+      "name": "otoco-entry-take-profit-stop",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 21,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 3,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 30,
+            "IsAsk": 0,
+            "MarketIndex": 1,
+            "OrderExpiry": 0,
+            "Price": 851000,
+            "ReduceOnly": 0,
+            "TimeInForce": 0,
+            "TriggerPrice": 0,
+            "Type": 1
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 32,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 882000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 900000,
+            "Type": 4
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "draws": [
+        "7b324198338f3bad19090ec4be1615897c60c25bf93fadcecd474a1852080d9a8d6ee6f545f0f50c"
+      ],
+      "out": {
+        "tx_type": 28,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"GroupingType\":3,\"Orders\":[{\"MarketIndex\":1,\"ClientOrderIndex\":30,\"BaseAmount\":1000,\"Price\":851000,\"IsAsk\":0,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0},{\"MarketIndex\":1,\"ClientOrderIndex\":32,\"BaseAmount\":0,\"Price\":882000,\"IsAsk\":1,\"Type\":4,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000},{\"MarketIndex\":1,\"ClientOrderIndex\":31,\"BaseAmount\":0,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000}],\"ExpiredAt\":1790000599000,\"Nonce\":21,\"Sig\":\"DZ70Fta/iOfRDZisyJptT8xlj2JyhaTPEp7/nQMxsEIuhOrkVSijLx03Z269r08Bs+w7QGpmwuekdXRz5NT7G7DtnF/EI38ipjhLt8me+yc=\",\"L2TxAttributes\":null}",
+        "tx_hash": "b43de9da5151eecef02e91c9582a24c60b3d94eb693017843857558cee27f865283598a7c572d15d"
+      }
+    },
+    {
+      "name": "otoco-limit-entry",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 22,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 3,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 33,
+            "IsAsk": 0,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 834530,
+            "ReduceOnly": 0,
+            "TimeInForce": 1,
+            "TriggerPrice": 0,
+            "Type": 0
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 32,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 882000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 900000,
+            "Type": 4
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "draws": [
+        "45038a93c485fc961f0024cbe0e09b8eb318bf2c7f132e2d024900abb51302e064871c50ec39b1cf"
+      ],
+      "out": {
+        "tx_type": 28,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"GroupingType\":3,\"Orders\":[{\"MarketIndex\":1,\"ClientOrderIndex\":33,\"BaseAmount\":1000,\"Price\":834530,\"IsAsk\":0,\"Type\":0,\"TimeInForce\":1,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":1792419200000},{\"MarketIndex\":1,\"ClientOrderIndex\":32,\"BaseAmount\":0,\"Price\":882000,\"IsAsk\":1,\"Type\":4,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000},{\"MarketIndex\":1,\"ClientOrderIndex\":31,\"BaseAmount\":0,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000}],\"ExpiredAt\":1790000599000,\"Nonce\":22,\"Sig\":\"wo79AIvWJyo0ZazsBPH9FW+gpnLh4VSo+PDb0ULhce8MyVHWXQOYRBAcGZHsYqfFLcDLPYHvFcZh1Y0hLKlzIYg2Y0FSJCcWbh+RvM6ZohQ=\",\"L2TxAttributes\":null}",
+        "tx_hash": "e58f7be812544522f84b8e98d2422737f51e3aed76b714f62df4c7050a22eb132b3104ee3a26c8e5"
+      }
+    },
+    {
+      "name": "oco-take-profit-and-stop",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 23,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 2,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 32,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 882000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 900000,
+            "Type": 4
+          },
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "draws": [
+        "954c465b3cc6500e2c1b3d1e1ddce0493389948d6605344df1b98344f54c29c78c0ddd0bb4544bc9"
+      ],
+      "out": {
+        "tx_type": 28,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"GroupingType\":2,\"Orders\":[{\"MarketIndex\":1,\"ClientOrderIndex\":32,\"BaseAmount\":1000,\"Price\":882000,\"IsAsk\":1,\"Type\":4,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000},{\"MarketIndex\":1,\"ClientOrderIndex\":31,\"BaseAmount\":1000,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000}],\"ExpiredAt\":1790000599000,\"Nonce\":23,\"Sig\":\"6LevgKz7WfiaKlt/OdLsIlPlrBoObdFvPkZN4AocPyCBoCfqVA/8dZRL/h8zDsE4OxTgMhNniQY5XyQ1X5k9cXiqKS2tqZNd4gOFeEOxlho=\",\"L2TxAttributes\":null}",
+        "tx_hash": "56e4f1893eaba3d77890bdabc67269b6bf9932b6d4f66be5efc23e9a5f754d089c1fdb9bcb0f24b0"
+      }
+    },
+    {
+      "name": "otoco-integrator",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 24,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 3,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 30,
+            "IsAsk": 0,
+            "MarketIndex": 1,
+            "OrderExpiry": 0,
+            "Price": 851000,
+            "ReduceOnly": 0,
+            "TimeInForce": 0,
+            "TriggerPrice": 0,
+            "Type": 1
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 32,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 882000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 900000,
+            "Type": 4
+          },
+          {
+            "BaseAmount": 0,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "attributes": {
+        "1": 713888,
+        "2": 500
+      },
+      "draws": [
+        "701421aacd2e789eb4212fbf9ebf89ddd0687292baf4a0f171e9b6d0ee1ea400d65c90ca87c277a5"
+      ],
+      "out": {
+        "tx_type": 28,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"GroupingType\":3,\"Orders\":[{\"MarketIndex\":1,\"ClientOrderIndex\":30,\"BaseAmount\":1000,\"Price\":851000,\"IsAsk\":0,\"Type\":1,\"TimeInForce\":0,\"ReduceOnly\":0,\"TriggerPrice\":0,\"OrderExpiry\":0},{\"MarketIndex\":1,\"ClientOrderIndex\":32,\"BaseAmount\":0,\"Price\":882000,\"IsAsk\":1,\"Type\":4,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":900000,\"OrderExpiry\":1792419200000},{\"MarketIndex\":1,\"ClientOrderIndex\":31,\"BaseAmount\":0,\"Price\":784000,\"IsAsk\":1,\"Type\":2,\"TimeInForce\":0,\"ReduceOnly\":1,\"TriggerPrice\":800000,\"OrderExpiry\":1792419200000}],\"ExpiredAt\":1790000599000,\"Nonce\":24,\"Sig\":\"IxVVz9dtM8Pe46Trqu5jxj38oG/JTXSo+91YtqMBcef84pJZjV/0MR2/d6ufCneinxoXKmf2dsKR1ZcsBPqxBOvRB3ZPQTBPAGZzqkp+sTo=\",\"L2TxAttributes\":{\"1\":713888,\"2\":500}}",
+        "tx_hash": "2cbf63f71eda454539651423fa4afc119606a664eeda4022a153a84bd8448670aa1c626ada4f8dc2"
+      }
+    },
+    {
+      "name": "refused-oto-sized-child",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CreateGroupedOrders",
+      "fields": {
+        "GroupingType": 1,
+        "Orders": [
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 30,
+            "IsAsk": 0,
+            "MarketIndex": 1,
+            "OrderExpiry": 0,
+            "Price": 851000,
+            "ReduceOnly": 0,
+            "TimeInForce": 0,
+            "TriggerPrice": 0,
+            "Type": 1
+          },
+          {
+            "BaseAmount": 1000,
+            "ClientOrderIndex": 31,
+            "IsAsk": 1,
+            "MarketIndex": 1,
+            "OrderExpiry": 1792419200000,
+            "Price": 784000,
+            "ReduceOnly": 1,
+            "TimeInForce": 0,
+            "TriggerPrice": 800000,
+            "Type": 2
+          }
+        ]
+      },
+      "error": "BaseAmount should be nil"
+    },
+    {
+      "name": "cancel-by-client-index",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 30,
+      "kind": "CancelOrder",
+      "fields": {
+        "Index": 1790000000000,
+        "MarketIndex": 1
+      },
+      "draws": [
+        "ad23e15274157953e7a7f6dc92799ca488a2da8615d8dbdc26932d6c3f906164255fc5aa14f4d5d2"
+      ],
+      "out": {
+        "tx_type": 15,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"Index\":1790000000000,\"ExpiredAt\":1790000599000,\"Nonce\":30,\"Sig\":\"+vGWTZgnmMXaR+kIE0z6+9dVujz1Jg8FOn95ynqJezRtMk0DfJSQO+4aju1eyFKarwjLBdzk0hIH0GAD2XMy6rVdDouFCEC9nkPGETs4gic=\",\"L2TxAttributes\":null}",
+        "tx_hash": "ac75e8dcc4e7c6574173a584178a9dc7f8c4c3df9f250513c9bb5a57593f974e958416284ce21884"
+      }
+    },
+    {
+      "name": "cancel-by-order-index",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 31,
+      "kind": "CancelOrder",
+      "fields": {
+        "Index": 562953635421737,
+        "MarketIndex": 1
+      },
+      "draws": [
+        "ff2ee206b9602c6e4e078bee6344dda4f03733487d579f85eade1210bc2baa6606e0152248994d61"
+      ],
+      "out": {
+        "tx_type": 15,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"Index\":562953635421737,\"ExpiredAt\":1790000599000,\"Nonce\":31,\"Sig\":\"fC8/iq/EfNvLeHJYLV04qvcb9BqGbwqJlAeSxhLu7gnSmH6oP128DSCt6cFPZiaUdhaWA1Yvs2L1tlBQ6SqYxJb7lCggzaOmwve8sdlT+FQ=\",\"L2TxAttributes\":null}",
+        "tx_hash": "c48f8932ceff622d85d29c76166b7eb3c4cbafead0198469980e21b384b9f26540dff7be42b49060"
+      }
+    },
+    {
+      "name": "cancel-order-index-above-2^53",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 32,
+      "kind": "CancelOrder",
+      "fields": {
+        "Index": 26177173101967466,
+        "MarketIndex": 92
+      },
+      "draws": [
+        "6b2b35a6899ae0a6e2fc08be1741cba39a583446e2978357fa6abc6ea6f0672d0235802669a63fc8"
+      ],
+      "out": {
+        "tx_type": 15,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":92,\"Index\":26177173101967466,\"ExpiredAt\":1790000599000,\"Nonce\":32,\"Sig\":\"QRmuxJxWencDaKpy6I8lVjYzSMIso6u5J7EpzbAEY1EhfzGK4QryfkxrD7UESitt78UzgQ+FuLwfx/SVzvppZcuH02a3Jms8fgGFwNS0y2Y=\",\"L2TxAttributes\":null}",
+        "tx_hash": "3e555d88dbb536f45d34973188bedb6e85da598c65c615ae954e72b5e850a22e738ec0216902591a"
+      }
+    },
+    {
+      "name": "cancel-all-now",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 33,
+      "kind": "CancelAllOrders",
+      "fields": {
+        "Time": 0,
+        "TimeInForce": 0
+      },
+      "draws": [
+        "d6a66ca6946e6b3f64117450f3e5484bc9ce3bc2e52c5a992728bc8a37c1531bf2b12468258d7815"
+      ],
+      "out": {
+        "tx_type": 16,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"TimeInForce\":0,\"Time\":0,\"ExpiredAt\":1790000599000,\"Nonce\":33,\"Sig\":\"oq6iw5oTLc2eoMPiamyg8HkFnXgRWLlsVSJpcSNOxgG3HnjCfH4+c7V/j9PVFSEB1cpPng9OJSiSQCilJLqysLcxgWj2PxVmRFl/+hCh9wo=\",\"L2TxAttributes\":null}",
+        "tx_hash": "67884c0fd611adc0b40eec48de2aec380b02f3939a6aba5ba3b9d030197003284bf7c92e6dd5a499"
+      }
+    },
+    {
+      "name": "cancel-all-one-market",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 34,
+      "kind": "CancelAllOrders",
+      "fields": {
+        "Time": 0,
+        "TimeInForce": 0
+      },
+      "attributes": {
+        "5": 1
+      },
+      "draws": [
+        "256e1d29183ace4ec87dbe50505d8efb74841f3e8160204c2e436d3f1e54d106e78834d7a9cfa5f3"
+      ],
+      "out": {
+        "tx_type": 16,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"TimeInForce\":0,\"Time\":0,\"ExpiredAt\":1790000599000,\"Nonce\":34,\"Sig\":\"yU0kJ2fclSZYUm6oZcONmV08vsvwtx3AvGREq0njgu8h8iHFjI3pWm4FcopOzxIs2k9x7esauqLZROGllkD0JqtXnudAAQyjjAmVh1XP5HQ=\",\"L2TxAttributes\":{\"5\":1}}",
+        "tx_hash": "9b160202b9a671901b4a3fb82619650b5bf8f20aaf617e8f7deb16bcaefa94ec90e346f931d6f94d"
+      }
+    },
+    {
+      "name": "cancel-all-scheduled",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 35,
+      "kind": "CancelAllOrders",
+      "fields": {
+        "Time": 1790000900000,
+        "TimeInForce": 1
+      },
+      "draws": [
+        "1b69df5849b9ad11d97bcd138a688f376ceed6139c5593e0a09188b61b9298219ba7d2eb632d6e1b"
+      ],
+      "out": {
+        "tx_type": 16,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"TimeInForce\":1,\"Time\":1790000900000,\"ExpiredAt\":1790000599000,\"Nonce\":35,\"Sig\":\"CiioZ+yYd0ZuTuBm4kDjNxOFmo3erAO0Dk/tPbQudS8wMkQPdYV8brOv3Rhb/1mn+FDg4vlYGKNvfwkDLNvjg5GRsQvqsI0B3QL0oQk0TXw=\",\"L2TxAttributes\":null}",
+        "tx_hash": "e8c17039c996bf77699b67119ad7dcefa5ce2b8e3857c7ee3dd8d9ad7dcedaa26948050defebca4d"
+      }
+    },
+    {
+      "name": "cancel-all-abort",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 36,
+      "kind": "CancelAllOrders",
+      "fields": {
+        "Time": 0,
+        "TimeInForce": 2
+      },
+      "draws": [
+        "069fc07e288cc14df66253f50c9b41c2c03522bc82c890709a54c09cce16c9fc5574cea3f7bc31f7"
+      ],
+      "out": {
+        "tx_type": 16,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"TimeInForce\":2,\"Time\":0,\"ExpiredAt\":1790000599000,\"Nonce\":36,\"Sig\":\"OuI6Ht3f9bu2AISXOTknfY35v00pWJhPkF0X5LWh3zyiY7wgrTCMGtzVRCuaNJlGESEOGMaNdNIKht4rdgGVRa0uyxtKgYLU60wjbnEgOi0=\",\"L2TxAttributes\":null}",
+        "tx_hash": "079938589f9258ea16b0795d69b23cecacf8e4d415d455365e7ec9678bcb6f98b9a0462495461ac2"
+      }
+    },
+    {
+      "name": "refused-cancel-one-market-scheduled",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "CancelAllOrders",
+      "fields": {
+        "Time": 1790000900000,
+        "TimeInForce": 1
+      },
+      "attributes": {
+        "5": 1
+      },
+      "error": "Cancel all for market index can't be scheduled, TimeInforce must be ImmediateCancelAll"
+    },
+    {
+      "name": "modify-limit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 37,
+      "kind": "ModifyOrder",
+      "fields": {
+        "BaseAmount": 2000,
+        "Index": 1790000000000,
+        "MarketIndex": 1,
+        "Price": 834000,
+        "TriggerPrice": 0
+      },
+      "draws": [
+        "a21718a8fe2ba8e9b7c86c39a2d4e97dcffc04bb1bc19063523f5d4841029b592486e926101997f7"
+      ],
+      "out": {
+        "tx_type": 17,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"Index\":1790000000000,\"BaseAmount\":2000,\"Price\":834000,\"TriggerPrice\":0,\"ExpiredAt\":1790000599000,\"Nonce\":37,\"Sig\":\"qctrySaFWk+uce1D2TrXEUEC/JbpmxmCL5IXaQI9Sd/jeS8cBSt5Z31xWZsCcZKiKvSuJYEx1CqwSQ1FkpJMoTvS6KUGFydVfP32pXTywgA=\",\"L2TxAttributes\":null}",
+        "tx_hash": "136b86fc82bad8a557fd8bf8d2fbe587e78a841166575bba4bc10e8447be9e349877c09cf6b5844d"
+      }
+    },
+    {
+      "name": "modify-trigger",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 38,
+      "kind": "ModifyOrder",
+      "fields": {
+        "BaseAmount": 20,
+        "Index": 11,
+        "MarketIndex": 1,
+        "Price": 780000,
+        "TriggerPrice": 795000
+      },
+      "draws": [
+        "da90aa73474c96a6cc11428664a814a3bd6abd11f88fe21544a18b5004f8a55f59cf74a4314936fd"
+      ],
+      "out": {
+        "tx_type": 17,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"Index\":11,\"BaseAmount\":20,\"Price\":780000,\"TriggerPrice\":795000,\"ExpiredAt\":1790000599000,\"Nonce\":38,\"Sig\":\"Jvbql3OPxcEFkg/OLEkX9RVfuGF5McELhjmrHhC5vfR2lYwYduH3NdXGK+KmhlVVvGzYGNhpt/qSWrnP95luc1j3OILYN01LhQGVnHPYR04=\",\"L2TxAttributes\":null}",
+        "tx_hash": "2410669c7ea535aeb2e9e773e9c65074f4da8fca3eed918456b1adb370ff4ae59406794ec040e0c3"
+      }
+    },
+    {
+      "name": "modify-with-version",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 39,
+      "kind": "ModifyOrder",
+      "fields": {
+        "BaseAmount": 2000,
+        "Index": 562953635421737,
+        "MarketIndex": 1,
+        "Price": 834000,
+        "TriggerPrice": 0
+      },
+      "attributes": {
+        "8": 7
+      },
+      "draws": [
+        "9cbd1a78240cc7f18320b761de1fddb185b2b5d83bcd3d7dd4f5e1e6f82483e0d4a8389b91cc674b"
+      ],
+      "out": {
+        "tx_type": 17,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"Index\":562953635421737,\"BaseAmount\":2000,\"Price\":834000,\"TriggerPrice\":0,\"ExpiredAt\":1790000599000,\"Nonce\":39,\"Sig\":\"OMUMyi4GEDylA2eGLh2i0ORakIH67jnkWsYcLdQSnXifJrbz6RLSK7WQIEip6YMhdZiBazt+USRDzdEeZT+a+Wkrrj3XO/vkyoaQqAzN4lc=\",\"L2TxAttributes\":{\"8\":7}}",
+        "tx_hash": "5626177d7a4c7921fe944fb6cf891bde6a6b06288c5db929b304496dc6ff5187c6c1c17dfc335476"
+      }
+    },
+    {
+      "name": "leverage-cross-10x",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 40,
+      "kind": "UpdateLeverage",
+      "fields": {
+        "InitialMarginFraction": 1000,
+        "MarginMode": 0,
+        "MarketIndex": 1
+      },
+      "draws": [
+        "0300eb6e69fa282420c0b70350a0d5fc9d2c5270f3abf1aa03fb518b485ddbfa0886001d5105637a"
+      ],
+      "out": {
+        "tx_type": 20,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1,\"InitialMarginFraction\":1000,\"MarginMode\":0,\"ExpiredAt\":1790000599000,\"Nonce\":40,\"Sig\":\"ej0/mktowh5Dd7G7d1yt+6EAMIToKVWD+KU72cZ77lLx1uG3EPzPPkhd0V6KFnchcfiG+BvNr75IIB4zdtK5xFaAw8KvAnv7SCRWIGkUfVs=\",\"L2TxAttributes\":null}",
+        "tx_hash": "ff2d4298b7c6817a1927c8b0b340aab36e47cb28d77d3435cb96df8cffe8a7179e2cc86fb68392a3"
+      }
+    },
+    {
+      "name": "leverage-isolated-3x",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 41,
+      "kind": "UpdateLeverage",
+      "fields": {
+        "InitialMarginFraction": 3333,
+        "MarginMode": 1,
+        "MarketIndex": 0
+      },
+      "draws": [
+        "031e180919253800dbc2096c9ed9ac51bf9ae1938efdb69370406c3fb1acc9dacafa49b287ceb22d"
+      ],
+      "out": {
+        "tx_type": 20,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"InitialMarginFraction\":3333,\"MarginMode\":1,\"ExpiredAt\":1790000599000,\"Nonce\":41,\"Sig\":\"Un/wJKFtKgI9Np4gFamh9Q3o2wNA8tOYmVwDsskOaa9obrh3EhbuYSVXmGoVL4uWnI96bMgV6te4VufFTchD0YG239kp1rXK48RwJJ+fBTM=\",\"L2TxAttributes\":null}",
+        "tx_hash": "f5a6ce021acb305a8bbad3732b46d31089b5e902e02a4b6f10008a0c428559bc177f0df6c951e923"
+      }
+    },
+    {
+      "name": "refused-leverage-zero",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "UpdateLeverage",
+      "fields": {
+        "InitialMarginFraction": 0,
+        "MarginMode": 0,
+        "MarketIndex": 0
+      },
+      "error": "InitialMarginFraction should not be less than 0"
+    },
+    {
+      "name": "margin-add",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 42,
+      "kind": "UpdateMargin",
+      "fields": {
+        "Direction": 1,
+        "MarketIndex": 0,
+        "USDCAmount": 25000000
+      },
+      "draws": [
+        "e0f41d26835fe84e16629748dc176d80483d08e1e211a882ab5fcacf9e0814adbc925398d48eec78"
+      ],
+      "out": {
+        "tx_type": 29,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"USDCAmount\":25000000,\"Direction\":1,\"ExpiredAt\":1790000599000,\"Nonce\":42,\"Sig\":\"Y78VmM7xrDrZsfwksEuqwfqFt+hBArVIrwAp4Zu+hCQG/bO1V7MsJYyFc8BVDS68/D09sdI79Ed/xnwykthzjLmagmBaH9DZSNWClhTKMEo=\",\"L2TxAttributes\":null}",
+        "tx_hash": "cff667e6f0920ffcbb49875a66a55f1b40c7b8161185b92729628074a30c6c34919097313f3d85b6"
+      }
+    },
+    {
+      "name": "margin-remove",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 43,
+      "kind": "UpdateMargin",
+      "fields": {
+        "Direction": 0,
+        "MarketIndex": 0,
+        "USDCAmount": 5000000
+      },
+      "draws": [
+        "bdd3c5fa60b16951acf898d0f528572fc97a59c5a02c70f24093970157f3317336f489bb6f2401fd"
+      ],
+      "out": {
+        "tx_type": 29,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"USDCAmount\":5000000,\"Direction\":0,\"ExpiredAt\":1790000599000,\"Nonce\":43,\"Sig\":\"9WG6lPAmA8VhmWk5CqbFMOZ++XmwWidpy2Pk11wR1bQDdxXURhq7HHa538h+i2uvdF+6/a9o+3VQhtAr/okyb6hW5K9cVE4hi6UJBOHmC00=\",\"L2TxAttributes\":null}",
+        "tx_hash": "fafb9ca4c110aa9116415eaed0e8f8e82226d25486a2b03e210d439e035b21669e314d659e397e3c"
+      }
+    },
+    {
+      "name": "margin-above-2^32",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 44,
+      "kind": "UpdateMargin",
+      "fields": {
+        "Direction": 1,
+        "MarketIndex": 0,
+        "USDCAmount": 12345678901234
+      },
+      "draws": [
+        "6ffed260b16d5cb3e7f530b5064d5ec8346e2c17916d048c7161b91bfdb8291c93d88c2352080ddc"
+      ],
+      "out": {
+        "tx_type": 29,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":0,\"USDCAmount\":12345678901234,\"Direction\":1,\"ExpiredAt\":1790000599000,\"Nonce\":44,\"Sig\":\"ETyHfMldhfJr4TKe0IZ1EirfLi7v2OZ2klAhduvt8Jh45E7ns/ZLSVUPqU6v3lYZkZIJYiFrAtxojgIUimt9cKNvIVV7q0INNPYaNzSMSAM=\",\"L2TxAttributes\":null}",
+        "tx_hash": "b3136104b114c3d5c4ca22670cbb98c833aab526ea13e0371640d3dd8b0c1c18e215316b293410fa"
+      }
+    },
+    {
+      "name": "transfer-to-sub-account",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 45,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 25000000,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 281474976710600,
+        "ToRouteType": 0,
+        "USDCFee": 0
+      },
+      "draws": [
+        "594f91209e532b57f3d7d447a768a0029dfc57e14a0675dff63fd73c3d431f8cb492657733b918c8"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710600,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":25000000,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":45,\"Sig\":\"dGqnKYpjKmD9cZtgt0GOXZf3CtDBtI94uUSWS6lgRAukLyE9j+sZNayhQW643TTg3z0rOLQ2AD8pDyOfPcmojM3BJf6aZbZ5sAxm1c7kYEw=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "dfa85ed0ea8f4d533e4c978555f00f365e4b302a95f94598037692bc0dfc106ffcf7f00026b36fc5",
+        "message_to_sign": "Transfer\n\nnonce: 0x000000000000002d\nfrom: 0x00000000000186a1 (route 0x0000000000000000)\napi key: 0x0000000000000004\nto: 0x0000ffffffffffc8 (route 0x0000000000000000)\nasset: 0x0000000000000003\namount: 0x00000000017d7840\nfee: 0x0000000000000000\nchainId: 0x0000000000000130\nmemo: 0000000000000000000000000000000000000000000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xd3756f24b7d1d7771937505d7a907734c059a9aa19d33219caf2f9f9dd74ba6216f7281c89ca9c7a70eac5e363597d8751ff1972b0733ad74dc810eaceea66cf1c",
+        "signed_tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710600,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":25000000,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":45,\"Sig\":\"dGqnKYpjKmD9cZtgt0GOXZf3CtDBtI94uUSWS6lgRAukLyE9j+sZNayhQW643TTg3z0rOLQ2AD8pDyOfPcmojM3BJf6aZbZ5sAxm1c7kYEw=\",\"L1Sig\":\"0xd3756f24b7d1d7771937505d7a907734c059a9aa19d33219caf2f9f9dd74ba6216f7281c89ca9c7a70eac5e363597d8751ff1972b0733ad74dc810eaceea66cf1c\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "transfer-to-another-owner",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 46,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 100000000,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 713888,
+        "ToRouteType": 0,
+        "USDCFee": 1000000
+      },
+      "draws": [
+        "292afa64aacb9f19b4247085a81221b69ce0f44b222293c1c40d75cd33d00fdc3df68804af9d2942"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":713888,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":100000000,\"USDCFee\":1000000,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":46,\"Sig\":\"P6MaozaVz9nsjknF+NZUIMiCVaUXOpvypipWebapgsLyNvDmDLUdMu1wNJOZYRFiaU467rUM5TbsU6eE9OyX4ULYhb1EBOg90iAHNsn3iy4=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "13c4fd25b6c2967a3183ef8cae8d9a3889e9a632cb8584ce7ccdefc5f834d6ee946a20c4f9105f9a",
+        "message_to_sign": "Transfer\n\nnonce: 0x000000000000002e\nfrom: 0x00000000000186a1 (route 0x0000000000000000)\napi key: 0x0000000000000004\nto: 0x00000000000ae4a0 (route 0x0000000000000000)\nasset: 0x0000000000000003\namount: 0x0000000005f5e100\nfee: 0x00000000000f4240\nchainId: 0x0000000000000130\nmemo: 0000000000000000000000000000000000000000000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xe8595c069e756cdfa157ab16033da9940232ae5f5899739014f57ef027c28ef417704693084e1ca673820d48316610ad6b3015b79b7e45dc13f9550d9e26d38e1b",
+        "signed_tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":713888,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":100000000,\"USDCFee\":1000000,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":46,\"Sig\":\"P6MaozaVz9nsjknF+NZUIMiCVaUXOpvypipWebapgsLyNvDmDLUdMu1wNJOZYRFiaU467rUM5TbsU6eE9OyX4ULYhb1EBOg90iAHNsn3iy4=\",\"L1Sig\":\"0xe8595c069e756cdfa157ab16033da9940232ae5f5899739014f57ef027c28ef417704693084e1ca673820d48316610ad6b3015b79b7e45dc13f9550d9e26d38e1b\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "fast-withdraw-memo",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 47,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 50000000,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000",
+        "ToAccountIndex": 281474976710646,
+        "ToRouteType": 0,
+        "USDCFee": 3000000
+      },
+      "draws": [
+        "a8da677e3350fca74e20d5e232bc3b65f1beb6004d1c8406402d88386f709d333565ddb1f3c5a857"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710646,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":50000000,\"USDCFee\":3000000,\"Memo\":[243,159,214,229,26,173,136,246,244,206,106,184,130,114,121,207,255,185,34,102,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":47,\"Sig\":\"WNY0xi3hpjJJj01qQE3dtnIF2PkMAa4k/nQjgoaCB4w7VAv/yY0RNVx+fURAPr1V1Tk4iDUFNNRqA4Egyu/74cudy/0ZfHeeQ8cxELbf3R0=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "006650d76c5ed06a134b5bbd780322af4f6d9b563e464f552ce420d68f2952941339a6aead703880",
+        "message_to_sign": "Transfer\n\nnonce: 0x000000000000002f\nfrom: 0x00000000000186a1 (route 0x0000000000000000)\napi key: 0x0000000000000004\nto: 0x0000fffffffffff6 (route 0x0000000000000000)\nasset: 0x0000000000000003\namount: 0x0000000002faf080\nfee: 0x00000000002dc6c0\nchainId: 0x0000000000000130\nmemo: f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x9648e717c3317da3481cec1fa9c710a1dc34a8e375a9da5f28ca3139529d3b102863d9dbebc41189b3c808ef63cb84b9c1fee3caf214d2258971cebd7655c5761b",
+        "signed_tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710646,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":50000000,\"USDCFee\":3000000,\"Memo\":[243,159,214,229,26,173,136,246,244,206,106,184,130,114,121,207,255,185,34,102,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":47,\"Sig\":\"WNY0xi3hpjJJj01qQE3dtnIF2PkMAa4k/nQjgoaCB4w7VAv/yY0RNVx+fURAPr1V1Tk4iDUFNNRqA4Egyu/74cudy/0ZfHeeQ8cxELbf3R0=\",\"L1Sig\":\"0x9648e717c3317da3481cec1fa9c710a1dc34a8e375a9da5f28ca3139529d3b102863d9dbebc41189b3c808ef63cb84b9c1fee3caf214d2258971cebd7655c5761b\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "transfer-spot-eth",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 48,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 12345678901234567,
+        "AssetIndex": 1,
+        "FromRouteType": 1,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 281474976710600,
+        "ToRouteType": 1,
+        "USDCFee": 0
+      },
+      "draws": [
+        "72508940f685d3d061f8fd7a6e90516cf705f08a9c51f590b62c0e20dea6cc428f1e004446dfd74e"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710600,\"AssetIndex\":1,\"FromRouteType\":1,\"ToRouteType\":1,\"Amount\":12345678901234567,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":48,\"Sig\":\"AIwx5G8V30WrgX1M6P8ERNaBXOgaBqL/vxzLrCetIl0Y4gSvpewBRr/zPrDN0nhCod9WemSBuINgZAsizDNx2QFafdjQpP8TANsm9umm5WU=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "6d6c53e4105e4094ed7e1156c0ec55908badba82f16ce50011071e477c41280be2aaaa3b1bf6310b",
+        "message_to_sign": "Transfer\n\nnonce: 0x0000000000000030\nfrom: 0x00000000000186a1 (route 0x0000000000000001)\napi key: 0x0000000000000004\nto: 0x0000ffffffffffc8 (route 0x0000000000000001)\nasset: 0x0000000000000001\namount: 0x002bdc545d6b4b87\nfee: 0x0000000000000000\nchainId: 0x0000000000000130\nmemo: 0000000000000000000000000000000000000000000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xf72a51276b6f938a181ae2a6550ffea2138cf025676a088f5d50fc956eb19e8361353f7e241610da8a086fb2026ac697bedc2e33ddfc165bbc6f78f0f2a4c9421b",
+        "signed_tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":281474976710600,\"AssetIndex\":1,\"FromRouteType\":1,\"ToRouteType\":1,\"Amount\":12345678901234567,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":48,\"Sig\":\"AIwx5G8V30WrgX1M6P8ERNaBXOgaBqL/vxzLrCetIl0Y4gSvpewBRr/zPrDN0nhCod9WemSBuINgZAsizDNx2QFafdjQpP8TANsm9umm5WU=\",\"L1Sig\":\"0xf72a51276b6f938a181ae2a6550ffea2138cf025676a088f5d50fc956eb19e8361353f7e241610da8a086fb2026ac697bedc2e33ddfc165bbc6f78f0f2a4c9421b\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "transfer-perps-to-spot",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 49,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 7000000,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 100001,
+        "ToRouteType": 1,
+        "USDCFee": 0
+      },
+      "draws": [
+        "8be65c11e6bf558364d6e63c382cb2c7ea48a5095941af1ffeecdf6618288381c0f91a2af73b306a"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":100001,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":1,\"Amount\":7000000,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":49,\"Sig\":\"XIgx7W33lytBkBQT8lG+wuU0h4SijMdRhzGMyc9SzujyCr38NXSzaaKWmppZ3HSdfDglTLfoScUebv05aqrC3jBLTbd9o+oDH9C3wOdbjGI=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "bb244802e85db84b6002b36da87e0799ad7fde8034976b5a208907d32bed77964d5847b5125624f8",
+        "message_to_sign": "Transfer\n\nnonce: 0x0000000000000031\nfrom: 0x00000000000186a1 (route 0x0000000000000000)\napi key: 0x0000000000000004\nto: 0x00000000000186a1 (route 0x0000000000000001)\nasset: 0x0000000000000003\namount: 0x00000000006acfc0\nfee: 0x0000000000000000\nchainId: 0x0000000000000130\nmemo: 0000000000000000000000000000000000000000000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x4d66fe47e2f40c08b61518a383f455ccb0b7042f34b156877a16886a040a74733b0358ab340a8e0b9300051140e2179d7bc06731d20676f262fed1fb28196ba71b",
+        "signed_tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"ToAccountIndex\":100001,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":1,\"Amount\":7000000,\"USDCFee\":0,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":49,\"Sig\":\"XIgx7W33lytBkBQT8lG+wuU0h4SijMdRhzGMyc9SzujyCr38NXSzaaKWmppZ3HSdfDglTLfoScUebv05aqrC3jBLTbd9o+oDH9C3wOdbjGI=\",\"L1Sig\":\"0x4d66fe47e2f40c08b61518a383f455ccb0b7042f34b156877a16886a040a74733b0358ab340a8e0b9300051140e2179d7bc06731d20676f262fed1fb28196ba71b\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "robinhood-transfer",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "expired_at": 1790000599000,
+      "nonce": 1,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 2000000,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 18971,
+        "ToRouteType": 0,
+        "USDCFee": 1000000
+      },
+      "draws": [
+        "783bc52c908331fdde5dbd4d25ec77746e12d99bdb8673fdb35fd9aefd2bd3e4d2ecb24f6fa8e8fa"
+      ],
+      "out": {
+        "tx_type": 12,
+        "tx_info": "{\"FromAccountIndex\":100002,\"ApiKeyIndex\":254,\"ToAccountIndex\":18971,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":2000000,\"USDCFee\":1000000,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":1,\"Sig\":\"3uFYGV5OgdzmZdvQtBlaTomhGVv++pNdGWA8+ilmiVgX6kt1WITdLivqLKHLl99Ho/Pst/CpxgEJu4IuxhhRcdnk/Zx8JvML5QlpCG6rgiw=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "0f4084d01d837f9e914c3d43e1853f3dceb8ea1dafa08fd11e0cc93d6aa72cd71895b9ba8be6d397",
+        "message_to_sign": "Transfer\n\nnonce: 0x0000000000000001\nfrom: 0x00000000000186a2 (route 0x0000000000000000)\napi key: 0x00000000000000fe\nto: 0x0000000000004a1b (route 0x0000000000000000)\nasset: 0x0000000000000003\namount: 0x00000000001e8480\nfee: 0x00000000000f4240\nchainId: 0x0000000000071d94\nmemo: 0000000000000000000000000000000000000000000000000000000000000000\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x8b300dcd40cdbc25637ff1b211d5794fd7a1062d67a6c8e0090c12c6dd8ae7e91b890b2af078d041acf0d05b91e0eda7b99ea6a6a0ce0f3bd845d2ca1bb7eec91c",
+        "signed_tx_info": "{\"FromAccountIndex\":100002,\"ApiKeyIndex\":254,\"ToAccountIndex\":18971,\"AssetIndex\":3,\"FromRouteType\":0,\"ToRouteType\":0,\"Amount\":2000000,\"USDCFee\":1000000,\"Memo\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"ExpiredAt\":1790000599000,\"Nonce\":1,\"Sig\":\"3uFYGV5OgdzmZdvQtBlaTomhGVv++pNdGWA8+ilmiVgX6kt1WITdLivqLKHLl99Ho/Pst/CpxgEJu4IuxhhRcdnk/Zx8JvML5QlpCG6rgiw=\",\"L1Sig\":\"0x8b300dcd40cdbc25637ff1b211d5794fd7a1062d67a6c8e0090c12c6dd8ae7e91b890b2af078d041acf0d05b91e0eda7b99ea6a6a0ce0f3bd845d2ca1bb7eec91c\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "refused-transfer-zero",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "Transfer",
+      "fields": {
+        "Amount": 0,
+        "AssetIndex": 3,
+        "FromRouteType": 0,
+        "Memo": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ToAccountIndex": 1,
+        "ToRouteType": 0,
+        "USDCFee": 0
+      },
+      "error": "TransferAmount should be larger than 1"
+    },
+    {
+      "name": "withdraw-usdc-perps",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 50,
+      "kind": "Withdraw",
+      "fields": {
+        "Amount": 10000000,
+        "AssetIndex": 3,
+        "RouteType": 0
+      },
+      "draws": [
+        "327c875824737542f9e7c94406373419f3a2499f4df67c328b7c52bc46739d7b6ab985591ff616e6"
+      ],
+      "out": {
+        "tx_type": 13,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"AssetIndex\":3,\"RouteType\":0,\"Amount\":10000000,\"ExpiredAt\":1790000599000,\"Nonce\":50,\"Sig\":\"ByUEaqJbnMEZyoZJeRzW+40vf59Dh+q+Qns3i1aHFB9SjR6xAu0ddPvwIZcP1xgy4BneQZDm75OKrixX/JEElbjE54iu5TpJc3QZZ1Os+lA=\",\"L2TxAttributes\":null}",
+        "tx_hash": "c2545216a1d60c624abcc3e9e7049cda3273896918193a00bb0d4c723b2fbfc6c2a5eab35ca9fd77"
+      }
+    },
+    {
+      "name": "withdraw-eth-spot",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 51,
+      "kind": "Withdraw",
+      "fields": {
+        "Amount": 98765432109876543,
+        "AssetIndex": 1,
+        "RouteType": 1
+      },
+      "draws": [
+        "9aac29cee61268def4532a61c2c4e7545e23a085aac70a08a068bc96e6430950da47dae543477425"
+      ],
+      "out": {
+        "tx_type": 13,
+        "tx_info": "{\"FromAccountIndex\":100001,\"ApiKeyIndex\":4,\"AssetIndex\":1,\"RouteType\":1,\"Amount\":98765432109876543,\"ExpiredAt\":1790000599000,\"Nonce\":51,\"Sig\":\"BO9HwfCbVD8Hlp4RtvTsG3G7ve2jkjZ2RmPfe/vCWeUYaV6ayKFXNT4I4AXxrT31TUmWjEFHK3ZAaeJ6XoCXJJH9fyp9NRMO1rfEDtQVMEY=\",\"L2TxAttributes\":null}",
+        "tx_hash": "23f15a934ea3b578a4234daa186ff72ae27ec04e7671ef5814aa56fc15898f0c13c858835d4a845d"
+      }
+    },
+    {
+      "name": "robinhood-withdraw",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "expired_at": 1790000599000,
+      "nonce": 2,
+      "kind": "Withdraw",
+      "fields": {
+        "Amount": 1000000,
+        "AssetIndex": 3,
+        "RouteType": 0
+      },
+      "draws": [
+        "020e5afdc92fce2685960cd32cf899b678f2b02bfb95ad769939f43ac9bc99e439179b50a48dbf63"
+      ],
+      "out": {
+        "tx_type": 13,
+        "tx_info": "{\"FromAccountIndex\":100002,\"ApiKeyIndex\":254,\"AssetIndex\":3,\"RouteType\":0,\"Amount\":1000000,\"ExpiredAt\":1790000599000,\"Nonce\":2,\"Sig\":\"lSZq3dELEw6IjfdHNFf2+mnmLqXPLb+i1qpqLI7Rz3/mbyjdI51bYrkirOt2HCrR2x3mIlCe7pE3KBD9/YkwC9fbGFCAeR5cYCnxcE4cpRs=\",\"L2TxAttributes\":null}",
+        "tx_hash": "ae0b71070f7bd659c47852260e41efe90aee9aed9e4ea61821a3e4c3e16a2818ec993636021fafa2"
+      }
+    },
+    {
+      "name": "register-key-a",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "ChangePubKey",
+      "fields": {
+        "PubKey": "0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889"
+      },
+      "draws": [
+        "e6954d8d5e8b50b9eb2fa513aa5806987ed3ccd57a81bf025f901b4323917714cdf654394c1bcc45"
+      ],
+      "out": {
+        "tx_type": 8,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"PubKey\":\"fOknFkm1LjG8F86rQcuaDEbQmacL5JjOm2Rari8jsUwBzDQCH0jYiQ==\",\"L1Sig\":\"\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"Gs+QnDQMFP7W5KhmgGMkSnhIKrmougzZ9tbJT7shS7aGq4eNMZ2+JNOjAGCxlXqp0o42bU9JBu+Wg6ZbVC628QPbFBJQKYCC7egavtNjMG4=\",\"L2TxAttributes\":null}",
+        "tx_hash": "4722caa0287a0eaa51c9ec2853a9eb0e48bc7ef4d4ca0ff51388becefe108c7eccf1239e4c1639e3",
+        "message_to_sign": "Register Lighter Account\n\npubkey: 0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889\nnonce: 0x0000000000000000\naccount index: 0x00000000000186a1\napi key index: 0x0000000000000004\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x36f9b7d6142fbfb58b54c73a1fd2d33c6f48ca5e650e988fd3107032c9816ffb3724ccb7bb8b9681b1f390499bce042e2342322b3b0ca2af7d40339c1e4077bf1c",
+        "signed_tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"PubKey\":\"fOknFkm1LjG8F86rQcuaDEbQmacL5JjOm2Rari8jsUwBzDQCH0jYiQ==\",\"L1Sig\":\"0x36f9b7d6142fbfb58b54c73a1fd2d33c6f48ca5e650e988fd3107032c9816ffb3724ccb7bb8b9681b1f390499bce042e2342322b3b0ca2af7d40339c1e4077bf1c\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"Gs+QnDQMFP7W5KhmgGMkSnhIKrmougzZ9tbJT7shS7aGq4eNMZ2+JNOjAGCxlXqp0o42bU9JBu+Wg6ZbVC628QPbFBJQKYCC7egavtNjMG4=\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "register-key-b-on-sub",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "b",
+        "account_index": 281474976710600,
+        "api_key_index": 5
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "ChangePubKey",
+      "fields": {
+        "PubKey": "0xfcd2e59ef744408afd790830b6ef8fb7499af7e9701dd1704fc9ab40ceb9c3313b657054bcbb4c30"
+      },
+      "draws": [
+        "2d37e20e3724cc86ee428ec38b2934669801ead7d73d449966dc26b90849611fc69ac5dd7cc2cfaf"
+      ],
+      "out": {
+        "tx_type": 8,
+        "tx_info": "{\"AccountIndex\":281474976710600,\"ApiKeyIndex\":5,\"PubKey\":\"/NLlnvdEQIr9eQgwtu+Pt0ma9+lwHdFwT8mrQM65wzE7ZXBUvLtMMA==\",\"L1Sig\":\"\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"iMfcklQKIj7loICfPJOevTkCOuPkgVHd8KNEddTbybHQ+s+bNiiqUQgBdJA9Bi+xegIfgyf11B7ipjApxEu9E1L5NAb9By5/gnrLlgl0azo=\",\"L2TxAttributes\":null}",
+        "tx_hash": "e3a7d8a65c559423e4b78ebc5bc93b7e5d7ba00acbcf77c16b14adb46550f20076f1b02ae3c63808",
+        "message_to_sign": "Register Lighter Account\n\npubkey: 0xfcd2e59ef744408afd790830b6ef8fb7499af7e9701dd1704fc9ab40ceb9c3313b657054bcbb4c30\nnonce: 0x0000000000000000\naccount index: 0x0000ffffffffffc8\napi key index: 0x0000000000000005\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x6d8ec2ea25da4c30d7669739c191d53edd16ddaf0d2acc9278b2f337af33af9f7c8f98cac1febaa9931920268bc41f98edfad468dc99b87f756334e1cfe08f941b",
+        "signed_tx_info": "{\"AccountIndex\":281474976710600,\"ApiKeyIndex\":5,\"PubKey\":\"/NLlnvdEQIr9eQgwtu+Pt0ma9+lwHdFwT8mrQM65wzE7ZXBUvLtMMA==\",\"L1Sig\":\"0x6d8ec2ea25da4c30d7669739c191d53edd16ddaf0d2acc9278b2f337af33af9f7c8f98cac1febaa9931920268bc41f98edfad468dc99b87f756334e1cfe08f941b\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"iMfcklQKIj7loICfPJOevTkCOuPkgVHd8KNEddTbybHQ+s+bNiiqUQgBdJA9Bi+xegIfgyf11B7ipjApxEu9E1L5NAb9By5/gnrLlgl0azo=\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "robinhood-register",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "expired_at": 1790000599000,
+      "nonce": 0,
+      "kind": "ChangePubKey",
+      "fields": {
+        "PubKey": "0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889"
+      },
+      "draws": [
+        "b83b67af4c967b5e45e666efc6a71ddd80b1e58b91fa20ad0d95379702ebf82d9b22f4ced7fec1c9"
+      ],
+      "out": {
+        "tx_type": 8,
+        "tx_info": "{\"AccountIndex\":100002,\"ApiKeyIndex\":254,\"PubKey\":\"fOknFkm1LjG8F86rQcuaDEbQmacL5JjOm2Rari8jsUwBzDQCH0jYiQ==\",\"L1Sig\":\"\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"J+7LE0H+rEpyi5vOvVeXMaNOJ32BYf97qvJgeY0834VHbR0qtthfL3a4Re/RPUHYpXeLhB0d3CyEaV+0VVvUBFx9P7fQUKvgrDa45hb9XWM=\",\"L2TxAttributes\":null}",
+        "tx_hash": "4b1baf6c15b1482e1489203234090c036efaa352fc6320b3faaa066a0f39f9a71185b7e8467d0bb0",
+        "message_to_sign": "Register Lighter Account\n\npubkey: 0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889\nnonce: 0x0000000000000000\naccount index: 0x00000000000186a2\napi key index: 0x00000000000000fe\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xae4c69fe907d988dd7e99c99feceb2373600f8d52fee3221c65d4b8a206d48a668ec9c2ee16ea6983323faf901abe544fbb3c778b940a172b3ca100f8ecbdeac1c",
+        "signed_tx_info": "{\"AccountIndex\":100002,\"ApiKeyIndex\":254,\"PubKey\":\"fOknFkm1LjG8F86rQcuaDEbQmacL5JjOm2Rari8jsUwBzDQCH0jYiQ==\",\"L1Sig\":\"0xae4c69fe907d988dd7e99c99feceb2373600f8d52fee3221c65d4b8a206d48a668ec9c2ee16ea6983323faf901abe544fbb3c778b940a172b3ca100f8ecbdeac1c\",\"ExpiredAt\":1790000599000,\"Nonce\":0,\"Sig\":\"J+7LE0H+rEpyi5vOvVeXMaNOJ32BYf97qvJgeY0834VHbR0qtthfL3a4Re/RPUHYpXeLhB0d3CyEaV+0VVvUBFx9P7fQUKvgrDa45hb9XWM=\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "create-sub-account",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 52,
+      "kind": "CreateSubAccount",
+      "fields": {},
+      "draws": [
+        "f893e5bfd294705f70101b356cc4e5255bf74e1ab30439ea68e34acd208d223e9ef3736f984d4ba5"
+      ],
+      "out": {
+        "tx_type": 9,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"ExpiredAt\":1790000599000,\"Nonce\":52,\"Sig\":\"BrgQclAbiDZ+hQWBpbl/8vpZj4gkTntcXmQr98TrcugS7vdeSI+mJnM/nqLl6lLVhyN9dy7LhG61NpbBL/Xo1Ke44Ad3GXsC+qxkypMsnRs=\",\"L2TxAttributes\":null}",
+        "tx_hash": "2ed13f0af3aecfe60f0df8796508de074baa6ec6f198b398e75b2f402e4196aee2f79c13d778416b"
+      }
+    },
+    {
+      "name": "create-public-pool",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 53,
+      "kind": "CreatePublicPool",
+      "fields": {
+        "InitialTotalShares": 1000000000,
+        "MinOperatorShareRate": 1000,
+        "OperatorFee": 100000
+      },
+      "draws": [
+        "dea9f2135365d550ce542c3338e1d85f4ed2460201ed2ac21fdd22eb81aacb609237fa85e3930259"
+      ],
+      "out": {
+        "tx_type": 10,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"OperatorFee\":100000,\"InitialTotalShares\":1000000000,\"MinOperatorShareRate\":1000,\"ExpiredAt\":1790000599000,\"Nonce\":53,\"Sig\":\"JknHCgO5HHHw0p/v00xdKqWL8qgoqbRKEmotbW8Eg50e9oaxdzQhGlp6ec93bL7BAkOqj/Z9l92eP+/c08UqYaekvB6kx4BI2bCj06uhNS4=\",\"L2TxAttributes\":null}",
+        "tx_hash": "676f9440012d00f3ca05dd5a23bddd90bea41632ce15154ed13a787be3dce3132c2285462ebd0871"
+      }
+    },
+    {
+      "name": "update-public-pool",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 54,
+      "kind": "UpdatePublicPool",
+      "fields": {
+        "MinOperatorShareRate": 500,
+        "OperatorFee": 50000,
+        "PublicPoolIndex": 281474976710500,
+        "Status": 1
+      },
+      "draws": [
+        "ad9015420fb421a462acc9b4efd5f04e87bfc7ed1f509da47977d0028d23b7f119884df76bcf3729"
+      ],
+      "out": {
+        "tx_type": 11,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"PublicPoolIndex\":281474976710500,\"Status\":1,\"OperatorFee\":50000,\"MinOperatorShareRate\":500,\"ExpiredAt\":1790000599000,\"Nonce\":54,\"Sig\":\"l8nRvav39IawmzohwdELRRg18Z5ftIXUUKYadIxYhY0kDJhOf3O8F4abWbad4ygvBhLX4NDCyOeO6sn57NsDCeRZqSyILTV+ePiTKaJInwQ=\",\"L2TxAttributes\":null}",
+        "tx_hash": "397be9f2ef44fd1915f8ac8f658c3c5e4a24d4165d9ba4825fa17fe121788e21cf258650a3be1df6"
+      }
+    },
+    {
+      "name": "mint-llp-shares",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 55,
+      "kind": "MintShares",
+      "fields": {
+        "PublicPoolIndex": 281474976710654,
+        "ShareAmount": 3000000
+      },
+      "draws": [
+        "b18c3abbc634e302ffbe535b8eebe5dcba2da2356a6565e3452ae4ff153871fcb5938cad820bf0f7"
+      ],
+      "out": {
+        "tx_type": 18,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"PublicPoolIndex\":281474976710654,\"ShareAmount\":3000000,\"ExpiredAt\":1790000599000,\"Nonce\":55,\"Sig\":\"IndYpZS8qEBXQ4DcaslNSHqUF/EZjm0QlTF+tqBNnQRcSNgXt1tmdWb0wDX2ZRzit9kO2KwSvgy2XJc1m1u2zWXHo/rwqGht9MJ22kiUp28=\",\"L2TxAttributes\":null}",
+        "tx_hash": "b00737c4ce9c616f4f277744225a529aae90cefa95bb6d787ae77826f51d68c79f4c46c997b429cd"
+      }
+    },
+    {
+      "name": "burn-llp-shares",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 56,
+      "kind": "BurnShares",
+      "fields": {
+        "PublicPoolIndex": 281474976710654,
+        "ShareAmount": 1500000
+      },
+      "draws": [
+        "a8a0d75406b911ebd689107799f1b08087e2092386c932ee2d56052fb96f005db29991bef85adb54"
+      ],
+      "out": {
+        "tx_type": 19,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"PublicPoolIndex\":281474976710654,\"ShareAmount\":1500000,\"ExpiredAt\":1790000599000,\"Nonce\":56,\"Sig\":\"Z4bsjMY7am3bZUyYP2MGEPsEuvbmFFawsJDHFl7loWedieyibtzrXfWwYUfYThsLZmOYAo0V9WjegOv9u24SArgI98Mge3GLloh7TSfwdhA=\",\"L2TxAttributes\":null}",
+        "tx_hash": "1299fa4cb20ead0c27af0c615f52b2535ecc7711e311ea984bed6667770a679d591110b1e57c8e86"
+      }
+    },
+    {
+      "name": "stake-lit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 57,
+      "kind": "StakeAssets",
+      "fields": {
+        "ShareAmount": 100000000,
+        "StakingPoolIndex": 281474976624800
+      },
+      "draws": [
+        "37f1d10c65e4257d9a8893b1943ca24c5a29e498843f0f55443f8ded4d1a0acf040e0eb75a11ed64"
+      ],
+      "out": {
+        "tx_type": 35,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"StakingPoolIndex\":281474976624800,\"ShareAmount\":100000000,\"ExpiredAt\":1790000599000,\"Nonce\":57,\"Sig\":\"sYhd4v5v2kcE3Hf5eui5DXuVyUSzV2a7oTMF1UgPF/yfH6ECIW5ZRUGfAWbdJE0BEmfexCyP6+tXdpLgLS7ijKIqLVUwm5l27ImfjiG00gk=\",\"L2TxAttributes\":null}",
+        "tx_hash": "e55704460a2b73383b148382f535e53264c2b2315f3fb844e104c23e369e29a0d2dca23129e21c23"
+      }
+    },
+    {
+      "name": "unstake-lit",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 58,
+      "kind": "UnstakeAssets",
+      "fields": {
+        "ShareAmount": 40000000,
+        "StakingPoolIndex": 281474976624800
+      },
+      "draws": [
+        "faf3437ea17c847f23fa5c3ebfd91573dc30751f21ccbc1bd1b3f1c48518758bf8a5da948dcc1484"
+      ],
+      "out": {
+        "tx_type": 36,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"StakingPoolIndex\":281474976624800,\"ShareAmount\":40000000,\"ExpiredAt\":1790000599000,\"Nonce\":58,\"Sig\":\"w2pCK76fcFu42LTsXh/FuHQmbIH6Hfp1NYHAIge4xFB2zL8zq+x0BY8ZOn7JPQYerDazqTfsHUxHrh6lxV9WcY8S3UOP/+8pCwF6U1Tx9Ds=\",\"L2TxAttributes\":null}",
+        "tx_hash": "6d8dc337a35d2365ef3fdef43271761ac2e78b501bf4532b3c3a8d5c0ce467abd989393e391eb713"
+      }
+    },
+    {
+      "name": "unified-trading-mode",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 59,
+      "kind": "UpdateAccountConfig",
+      "fields": {
+        "AccountTradingMode": 1
+      },
+      "draws": [
+        "d84fd88aa4811e67223831ae43415043387c8849fa922604b07e9afbe351489be46ae05d8a3e9db7"
+      ],
+      "out": {
+        "tx_type": 41,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"AccountTradingMode\":1,\"ExpiredAt\":1790000599000,\"Nonce\":59,\"Sig\":\"AC3o5xmfEsLngMU7dxv73HTy++fhiRve4JPi1V3osctkjWSeQ9DsQjHSGIDQRUcD9drVk+27Vv0wJ3C227dV4LWpOxJERY9yy1OxVixGymU=\",\"L2TxAttributes\":null}",
+        "tx_hash": "282bb504303a299ff75a278646b082bdd7d93da2f5124e11233adb3cd339ded9c726a55bca5bd342"
+      }
+    },
+    {
+      "name": "asset-as-margin",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 60,
+      "kind": "UpdateAccountAssetConfig",
+      "fields": {
+        "AssetIndex": 1,
+        "AssetMarginMode": 1
+      },
+      "draws": [
+        "0223cd3fe8f45be466ac6c9b212cd8df321088b4d29ec52f3d6fc012992c08e2800c85559954df96"
+      ],
+      "out": {
+        "tx_type": 42,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"AssetIndex\":1,\"AssetMarginMode\":1,\"ExpiredAt\":1790000599000,\"Nonce\":60,\"Sig\":\"3LBuUd0ay3A/4q36gpZp91ierWZ9DES4Az9dS9YPmH94oJIPCGdwC6CKRIFRn6TXvbTVYLLJD0QtK2BLbsdPzyouERiOyLAvJxy+wz3/HAc=\",\"L2TxAttributes\":null}",
+        "tx_hash": "6107fe1be130a2bc4b636fcb5ee57f0dfeeaa18368653559b89ca441f41e3c88542a761a033d1ce4"
+      }
+    },
+    {
+      "name": "approve-integrator",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 61,
+      "kind": "ApproveIntegrator",
+      "fields": {
+        "ApprovalExpiry": 1821536000000,
+        "IntegratorAccountIndex": 713888,
+        "MaxPerpsMakerFee": 500,
+        "MaxPerpsTakerFee": 1000,
+        "MaxSpotMakerFee": 0,
+        "MaxSpotTakerFee": 10000
+      },
+      "draws": [
+        "59ac2f9292a48556a7d95fe1d6c2b4ff1bb6732d1a974974fd0fc7e04e3683f272279ee5c7f06f01"
+      ],
+      "out": {
+        "tx_type": 45,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"IntegratorAccountIndex\":713888,\"MaxPerpsTakerFee\":1000,\"MaxPerpsMakerFee\":500,\"MaxSpotTakerFee\":10000,\"MaxSpotMakerFee\":0,\"ApprovalExpiry\":1821536000000,\"ExpiredAt\":1790000599000,\"Nonce\":61,\"Sig\":\"AF5Bz3PEdmmx+95a0QhjymtJH2ybeNPYL8+mOXpwWdc4zOVB3g45SJITCfPxi/A832FvDwCOkXN2qlKmaaRt2eiqlmoynenbAKEeXIJV3wI=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "ee515259516568d9ba5305324bbd8922031612ab77caad2b0b9bd49085ddea0608751c8d5780ac14",
+        "message_to_sign": "Approve Integrator\n\nnonce: 0x000000000000003d\naccount index: 0x00000000000186a1\napi key index: 0x0000000000000004\nintegrator account index: 0x00000000000ae4a0\nmax perps taker fee: 0x00000000000003e8\nmax perps maker fee: 0x00000000000001f4\nmax spot taker fee: 0x0000000000002710\nmax spot maker fee: 0x0000000000000000\napproval expiry: 0x000001a81c019800\nchainId: 0x0000000000000130\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xb6c79e7b6e0ca0cf63371318baaa2694053d5ee8c16c5b4120f90cec0bbb72bb2524051ced2ea41ee2f3d877260870db15844acba61cb13ebf4e8e553d8b55d21b",
+        "signed_tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"IntegratorAccountIndex\":713888,\"MaxPerpsTakerFee\":1000,\"MaxPerpsMakerFee\":500,\"MaxSpotTakerFee\":10000,\"MaxSpotMakerFee\":0,\"ApprovalExpiry\":1821536000000,\"ExpiredAt\":1790000599000,\"Nonce\":61,\"Sig\":\"AF5Bz3PEdmmx+95a0QhjymtJH2ybeNPYL8+mOXpwWdc4zOVB3g45SJITCfPxi/A832FvDwCOkXN2qlKmaaRt2eiqlmoynenbAKEeXIJV3wI=\",\"L1Sig\":\"0xb6c79e7b6e0ca0cf63371318baaa2694053d5ee8c16c5b4120f90cec0bbb72bb2524051ced2ea41ee2f3d877260870db15844acba61cb13ebf4e8e553d8b55d21b\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "revoke-integrator",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 62,
+      "kind": "ApproveIntegrator",
+      "fields": {
+        "ApprovalExpiry": 0,
+        "IntegratorAccountIndex": 713888,
+        "MaxPerpsMakerFee": 0,
+        "MaxPerpsTakerFee": 0,
+        "MaxSpotMakerFee": 0,
+        "MaxSpotTakerFee": 0
+      },
+      "draws": [
+        "b7396136709dd0d2e81162169ade75c9e17a96cef6166367b80134996bbe2e2515cec600e06e9ce7"
+      ],
+      "out": {
+        "tx_type": 45,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"IntegratorAccountIndex\":713888,\"MaxPerpsTakerFee\":0,\"MaxPerpsMakerFee\":0,\"MaxSpotTakerFee\":0,\"MaxSpotMakerFee\":0,\"ApprovalExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":62,\"Sig\":\"vE+wnw//F7u++t7+2YTAtBnCaEV4P9umdi5B1ZrAbmMLB0ENJKsQQbxESfjRVrAJZUtZtCTYKNh/au7+zkqXWjuvuCu4hslTOgrFRQKwi2c=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "ec27de87c2131dbcbcd3197e77d918cb24c200e107404836971d13598ffd975b9fb4564b30ef8d1a",
+        "message_to_sign": "Approve Integrator\n\nnonce: 0x000000000000003e\naccount index: 0x00000000000186a1\napi key index: 0x0000000000000004\nintegrator account index: 0x00000000000ae4a0\nmax perps taker fee: 0x0000000000000000\nmax perps maker fee: 0x0000000000000000\nmax spot taker fee: 0x0000000000000000\nmax spot maker fee: 0x0000000000000000\napproval expiry: 0x0000000000000000\nchainId: 0x0000000000000130\nOnly sign this message for a trusted client!",
+        "l1_sig": "0x4c3a2df8a1fb1c75c0914360ea42394b49e416a7c0269cc54bb241430b169c365f909806c09113bedeec5c41a5e2a83e6a7f78a42c6bc2d6ac4752e4fccd4e491c",
+        "signed_tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"IntegratorAccountIndex\":713888,\"MaxPerpsTakerFee\":0,\"MaxPerpsMakerFee\":0,\"MaxSpotTakerFee\":0,\"MaxSpotMakerFee\":0,\"ApprovalExpiry\":0,\"ExpiredAt\":1790000599000,\"Nonce\":62,\"Sig\":\"vE+wnw//F7u++t7+2YTAtBnCaEV4P9umdi5B1ZrAbmMLB0ENJKsQQbxESfjRVrAJZUtZtCTYKNh/au7+zkqXWjuvuCu4hslTOgrFRQKwi2c=\",\"L1Sig\":\"0x4c3a2df8a1fb1c75c0914360ea42394b49e416a7c0269cc54bb241430b169c365f909806c09113bedeec5c41a5e2a83e6a7f78a42c6bc2d6ac4752e4fccd4e491c\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "robinhood-approve-integrator",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "expired_at": 1790000599000,
+      "nonce": 3,
+      "kind": "ApproveIntegrator",
+      "fields": {
+        "ApprovalExpiry": 1792592000000,
+        "IntegratorAccountIndex": 45,
+        "MaxPerpsMakerFee": 10000,
+        "MaxPerpsTakerFee": 10000,
+        "MaxSpotMakerFee": 20000,
+        "MaxSpotTakerFee": 20000
+      },
+      "draws": [
+        "d9f5dfe9dddb1b374fd385834a8bf4d2d3e63aa54a33ba718673559056ce15c3f74c816b625bd0b5"
+      ],
+      "out": {
+        "tx_type": 45,
+        "tx_info": "{\"AccountIndex\":100002,\"ApiKeyIndex\":254,\"IntegratorAccountIndex\":45,\"MaxPerpsTakerFee\":10000,\"MaxPerpsMakerFee\":10000,\"MaxSpotTakerFee\":20000,\"MaxSpotMakerFee\":20000,\"ApprovalExpiry\":1792592000000,\"ExpiredAt\":1790000599000,\"Nonce\":3,\"Sig\":\"Y+QAt3Brhac/sxjYB+ifZHjuWgGBUOIXD7JluDABYrvAT9v8HW5fTj3aS6YsesLa3Mrc1gkq0OJSgvbuhINc/myWtByNAZQ99eKYyD4eUyM=\",\"L1Sig\":\"\",\"L2TxAttributes\":null}",
+        "tx_hash": "144f4ee732f430f6a635deee51c79e47c04844e63804a615ed96467d08bd9dba2bc69ce5ba9e6e63",
+        "message_to_sign": "Approve Integrator\n\nnonce: 0x0000000000000003\naccount index: 0x00000000000186a2\napi key index: 0x00000000000000fe\nintegrator account index: 0x000000000000002d\nmax perps taker fee: 0x0000000000002710\nmax perps maker fee: 0x0000000000002710\nmax spot taker fee: 0x0000000000004e20\nmax spot maker fee: 0x0000000000004e20\napproval expiry: 0x000001a15ecf3400\nchainId: 0x0000000000071d94\nOnly sign this message for a trusted client!",
+        "l1_sig": "0xdeba378bfdd0bc3218c49d7c5ef8b2b3bfb0b2f941b630646f3b5529c2d56d006cbea1604b3bf7df78f6f5d9bc04447ba7b9ee8f9f1bd3969d1cee930eaa4d251c",
+        "signed_tx_info": "{\"AccountIndex\":100002,\"ApiKeyIndex\":254,\"IntegratorAccountIndex\":45,\"MaxPerpsTakerFee\":10000,\"MaxPerpsMakerFee\":10000,\"MaxSpotTakerFee\":20000,\"MaxSpotMakerFee\":20000,\"ApprovalExpiry\":1792592000000,\"ExpiredAt\":1790000599000,\"Nonce\":3,\"Sig\":\"Y+QAt3Brhac/sxjYB+ifZHjuWgGBUOIXD7JluDABYrvAT9v8HW5fTj3aS6YsesLa3Mrc1gkq0OJSgvbuhINc/myWtByNAZQ99eKYyD4eUyM=\",\"L1Sig\":\"0xdeba378bfdd0bc3218c49d7c5ef8b2b3bfb0b2f941b630646f3b5529c2d56d006cbea1604b3bf7df78f6f5d9bc04447ba7b9ee8f9f1bd3969d1cee930eaa4d251c\",\"L2TxAttributes\":null}"
+      }
+    },
+    {
+      "name": "operator-create-market",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 63,
+      "kind": "BinaryOptionsOperatorCreateMarket",
+      "fields": {
+        "DefaultPrice": 50,
+        "EndTimestampMs": 1790008100000,
+        "IsFrozen": 0,
+        "MakerFee": 0,
+        "MarketSlot": 1500,
+        "MinBaseAmount": 50000,
+        "MinQuoteAmount": 1,
+        "OpenInterestLimit": 1125899906842624,
+        "OrderQuoteLimit": 281474976710655,
+        "PriceDecimals": 2,
+        "SettlementCap": 100,
+        "SettlementType": 0,
+        "SizeDecimals": 4,
+        "StartTimestampMs": 1790007200000,
+        "Symbol": "ETH-UPDOWN-15M-1790007200",
+        "TakerFee": 10000
+      },
+      "draws": [
+        "ed0c8d5826cf11865c623e44136e8d5e46bed0826690e6841ebe7721d442833c5c17baf8f0f62730"
+      ],
+      "out": {
+        "tx_type": 49,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1500,\"MarketType\":2,\"BaseAssetId\":3,\"QuoteAssetId\":3,\"StartTimestamp\":1790007200000,\"EndTimestamp\":1790008100000,\"SizeExtensionMultiplier\":100000000,\"QuoteExtensionMultiplier\":1000000,\"SettlementCap\":100,\"SettlementType\":0,\"DefaultPrice\":50,\"TakerFee\":10000,\"MakerFee\":0,\"MinBaseAmount\":50000,\"MinQuoteAmount\":1,\"OrderQuoteLimit\":281474976710655,\"OpenInterestLimit\":1125899906842624,\"IsFrozen\":0,\"Symbol\":[69,84,72,45,85,80,68,79,87,78,45,49,53,77,45,49,55,57,48,48,48,55,50,48,48,0,0,0,0,0,0,0],\"SizeDecimals\":4,\"PriceDecimals\":2,\"ExpiredAt\":1790000599000,\"Nonce\":63,\"Sig\":\"UKYcMe+pTU5UVYty6Fuqh7KGwduOjnTl44122POkrOpvWjFfJcvhRHYEZ2h8iKCPMTIySTnlGvBIQIfZxayJ/pU0PhSD8fiy9/nMmEcrzwY=\",\"L2TxAttributes\":null}",
+        "tx_hash": "de77f3debb7b64784c2cc22180617ef437441e02364fe81cb63822e417787317fc3f6ef2323ac2c4"
+      }
+    },
+    {
+      "name": "operator-freeze-market",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 64,
+      "kind": "BinaryOptionsOperatorUpdateMarket",
+      "fields": {
+        "EndTimestampMs": 1790000900000,
+        "IsFrozen": 1,
+        "LiquidationFee": 0,
+        "MakerFee": 0,
+        "MarketIndex": 4206,
+        "MarketSlot": 1500,
+        "MinBaseAmount": 50000,
+        "MinQuoteAmount": 1,
+        "OpenInterestLimit": 1125899906842624,
+        "OrderQuoteLimit": 281474976710655,
+        "StartTimestampMs": 1790000000000,
+        "TakerFee": 10000
+      },
+      "draws": [
+        "b2e6d8fe3c1a5180554da2cbc45dd20fce399816e92a7eaf871191751a1b70ae9d3387b63f42ad7c"
+      ],
+      "out": {
+        "tx_type": 52,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1500,\"PublicMarketIndex\":4206,\"StartTimestamp\":1790000000000,\"EndTimestamp\":1790000900000,\"TakerFee\":10000,\"MakerFee\":0,\"LiquidationFee\":0,\"MinBaseAmount\":50000,\"MinQuoteAmount\":1,\"OrderQuoteLimit\":281474976710655,\"OpenInterestLimit\":1125899906842624,\"IsFrozen\":1,\"ExpiredAt\":1790000599000,\"Nonce\":64,\"Sig\":\"oOuHXQc7bor1rS/3WN8hmjtbnt8Qyeq0tTiduLO9T4VXK1FPerwCFsBjaRXgEAJWWHE6GIr+eLV6p5IW0pFqupOeMv+ReqrjeXUwkzzZaF0=\",\"L2TxAttributes\":null}",
+        "tx_hash": "6f9749f88aa4ea38388421c0933e4bddfbf6403df0b0712be1658e79c93ad8bcb758617ae149897c"
+      }
+    },
+    {
+      "name": "operator-settle-up",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 65,
+      "kind": "BinaryOptionsOperatorSettleMarket",
+      "fields": {
+        "IsRefund": 0,
+        "MarketIndex": 4206,
+        "MarketSlot": 1500,
+        "SettlementPrice": 100
+      },
+      "draws": [
+        "01045fe2ace5746b0916c4c958c9bc482b190be6e523969359e704a678c485d71f26a05cac3ab07e"
+      ],
+      "out": {
+        "tx_type": 50,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1500,\"PublicMarketIndex\":4206,\"SettlementPrice\":100,\"IsRefund\":0,\"ExpiredAt\":1790000599000,\"Nonce\":65,\"Sig\":\"UPsUzHlstB8Bg7zmHNErbq2OCyG2QmMb3Kf+COxZ6Wngz7tvROMjdD5gZAal3Sgv8c04hb0F14qLo9HB50BbY0GZ6h5EtfSoYMPpRaIHR3g=\",\"L2TxAttributes\":null}",
+        "tx_hash": "0726b7747646e4f27ee8fd9886f4a3e1359a70f9f06ee7e73cd6da7d21589d96ce32fa22778dba92"
+      }
+    },
+    {
+      "name": "operator-refund",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "expired_at": 1790000599000,
+      "nonce": 66,
+      "kind": "BinaryOptionsOperatorSettleMarket",
+      "fields": {
+        "IsRefund": 1,
+        "MarketIndex": 4206,
+        "MarketSlot": 1500,
+        "SettlementPrice": 0
+      },
+      "draws": [
+        "5bd2fbe1be7f1f773e33de61cc10cb5dd9f5f2daa273ad7d8a1220e9875a27e518a19c19e71999b5"
+      ],
+      "out": {
+        "tx_type": 50,
+        "tx_info": "{\"AccountIndex\":100001,\"ApiKeyIndex\":4,\"MarketIndex\":1500,\"PublicMarketIndex\":4206,\"SettlementPrice\":0,\"IsRefund\":1,\"ExpiredAt\":1790000599000,\"Nonce\":66,\"Sig\":\"f51Pe2QWqeHLQHOlOTvyp+571RzGX6XRO06O+IoLSeA1kBH3ZT/FQvz9ClDdj/DsO7cmy0eMtoR1CnG5/hKFMueklHNDSTjBnpmAr+kvo2M=\",\"L2TxAttributes\":null}",
+        "tx_hash": "a4eecb7291828f6f1e2c14b6849afd92aeeae30facb1f1639a2036a954d3ad816a8346c5aa03f43c"
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "name": "auth-token-7h",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "a",
+        "account_index": 100001,
+        "api_key_index": 4
+      },
+      "deadline_s": 1790025200,
+      "draws": [
+        "f70777f083cb4e4f9a374587ddbfcbcdfcd3dc8ff415916cc237538aec60217a468fd0900d1d2925"
+      ],
+      "token": "1790025200:100001:4:352d679839c398b65b502536c1cab9e46a61dcf4e3db72eb7649bdaa1575f2ff520bce4224bb0b184f2c8fa58e3d4eaee757fcf12871a21818fba716117f2a9719e0d2edc549555b3248c325ed4b0103"
+    },
+    {
+      "name": "auth-token-robinhood",
+      "signer": {
+        "network": "robinhood",
+        "chain_id": 466324,
+        "key": "a",
+        "account_index": 100002,
+        "api_key_index": 254
+      },
+      "deadline_s": 1790003600,
+      "draws": [
+        "89024bed32c717de2ac26791b72bd155edcb04cd116080800e0cce80cc51ca1bd13a81836041f931"
+      ],
+      "token": "1790003600:100002:254:56c0a53ac297821128cfdec75a1646d4f99e55a3ede681827a67f7eca96dd8e2e5fc3c01d35fd059de4dc422130c6220c50d12e5faff23a2c3c181245af3cf67129ec930e56a43763ccbbc8857f44511"
+    },
+    {
+      "name": "auth-token-sub-account",
+      "signer": {
+        "network": "lighter",
+        "chain_id": 304,
+        "key": "b",
+        "account_index": 281474976710600,
+        "api_key_index": 5
+      },
+      "deadline_s": 1790000600,
+      "draws": [
+        "668172a8cf14528acbb6d374b4f1a71db3863cf192331c556eba0576738dc2e46ba31459e492648f"
+      ],
+      "token": "1790000600:281474976710600:5:616b68cf6bb85015cf0d22b3bdd62f87d318cd47b2b98bc46a1440192247eca690b884d575ea7459d6ea782b0822972195074d460ca155840b76bae4222329998276c8d3155ef9bd0a92c10645752c04"
+    }
+  ],
+  "evm": [
+    {
+      "name": "deposit-usdc-perps",
+      "function": "deposit(address,uint16,uint8,uint256)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        3,
+        0,
+        "25500000"
+      ],
+      "calldata": "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960"
+    },
+    {
+      "name": "deposit-eth-spot",
+      "function": "deposit(address,uint16,uint8,uint256)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        1,
+        1,
+        "50000000000000000"
+      ],
+      "calldata": "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb922660000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000b1a2bc2ec50000"
+    },
+    {
+      "name": "approve-lighter",
+      "function": "approve(address,uint256)",
+      "args": [
+        "0x3B4D794a66304F130a4Db8F2551B0070dfCf5ca7",
+        "25500000"
+      ],
+      "calldata": "0x095ea7b30000000000000000000000003b4d794a66304f130a4db8f2551b0070dfcf5ca70000000000000000000000000000000000000000000000000000000001851960"
+    },
+    {
+      "name": "withdraw-usdc",
+      "function": "withdraw(uint48,uint16,uint8,uint64)",
+      "args": [
+        10,
+        3,
+        0,
+        "10000000"
+      ],
+      "calldata": "0xd20191bd000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000989680"
+    },
+    {
+      "name": "change-pub-key",
+      "function": "changePubKey(uint48,uint8,bytes)",
+      "args": [
+        100001,
+        4,
+        "0x7ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889"
+      ],
+      "calldata": "0x17010c6800000000000000000000000000000000000000000000000000000000000186a10000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000287ce9271649b52e31bc17ceab41cb9a0c46d099a70be498ce9b645aae2f23b14c01cc34021f48d889000000000000000000000000000000000000000000000000"
+    },
+    {
+      "name": "cancel-all-orders",
+      "function": "cancelAllOrders(uint48)",
+      "args": [
+        100001
+      ],
+      "calldata": "0xa4b6f75600000000000000000000000000000000000000000000000000000000000186a1"
+    },
+    {
+      "name": "create-order",
+      "function": "createOrder(uint48,uint16,uint48,uint32,uint8,uint8)",
+      "args": [
+        100001,
+        1,
+        20,
+        817000,
+        1,
+        1
+      ],
+      "calldata": "0x3c40c67600000000000000000000000000000000000000000000000000000000000186a10000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000c776800000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "name": "burn-shares",
+      "function": "burnShares(uint48,uint48,uint64)",
+      "args": [
+        100001,
+        "281474976710654",
+        1500000
+      ],
+      "calldata": "0xae150b3900000000000000000000000000000000000000000000000000000000000186a10000000000000000000000000000000000000000000000000000fffffffffffe000000000000000000000000000000000000000000000000000000000016e360"
+    },
+    {
+      "name": "withdraw-pending-balance",
+      "function": "withdrawPendingBalance(address,uint16,uint128)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        3,
+        "10000000"
+      ],
+      "calldata": "0x2f25807e000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb9226600000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000989680"
+    },
+    {
+      "name": "address-to-account-index",
+      "function": "addressToAccountIndex(address)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+      ],
+      "calldata": "0xabf6a038000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+    },
+    {
+      "name": "get-pending-balance",
+      "function": "getPendingBalance(address,uint16)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        3
+      ],
+      "calldata": "0xd1cbc64f000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb922660000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "name": "token-to-asset-index",
+      "function": "tokenToAssetIndex(address)",
+      "args": [
+        "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      ],
+      "calldata": "0x899cfa29000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    },
+    {
+      "name": "allowance",
+      "function": "allowance(address,address)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "0x3B4D794a66304F130a4Db8F2551B0070dfCf5ca7"
+      ],
+      "calldata": "0xdd62ed3e000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb922660000000000000000000000003b4d794a66304f130a4db8f2551b0070dfcf5ca7"
+    },
+    {
+      "name": "balance-of",
+      "function": "balanceOf(address)",
+      "args": [
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+      ],
+      "calldata": "0x70a08231000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+    },
+    {
+      "name": "deposit-tx-ethereum",
+      "function": "eip1559",
+      "args": [
+        1,
+        7,
+        "1000000000",
+        "30000000000",
+        120000,
+        "0x3B4D794a66304F130a4Db8F2551B0070dfCf5ca7",
+        "0",
+        "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960"
+      ],
+      "calldata": "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960",
+      "tx": {
+        "hash": "0x6936ceea7f4827630678f71e669a592b2965d06411e35d7df26880fd22abb098",
+        "raw": "0x02f8f10107843b9aca008506fc23ac008301d4c0943b4d794a66304f130a4db8f2551b0070dfcf5ca780b8848a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960c001a0798254a6c4c02e79f4c43a75c85c80b8f6eb248812aaebb771bab499765225aaa065e0194950fcd36c9c8fca6db23248f39d19324c541d19210dfa8e66ee8f1573"
+      }
+    },
+    {
+      "name": "approve-tx-robinhood",
+      "function": "eip1559",
+      "args": [
+        4663,
+        0,
+        "1000000000",
+        "30000000000",
+        120000,
+        "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+        "0",
+        "0x095ea7b300000000000000000000000094bab9693ba2f6358507effcbd372b0660afff9d0000000000000000000000000000000000000000000000000000000001851960"
+      ],
+      "calldata": "0x095ea7b300000000000000000000000094bab9693ba2f6358507effcbd372b0660afff9d0000000000000000000000000000000000000000000000000000000001851960",
+      "tx": {
+        "hash": "0x922f590410a70f7032e42e93ab1881a86a3b0d0c1ef4c9328ab951e25c5e856d",
+        "raw": "0x02f8b382123780843b9aca008506fc23ac008301d4c0945fc5360d0400a0fd4f2af552add042d716f1d16880b844095ea7b300000000000000000000000094bab9693ba2f6358507effcbd372b0660afff9d0000000000000000000000000000000000000000000000000000000001851960c001a0f207d768672aad3dfe771a178921d4ba3ceb5237ff8ad75b079e33173114e34ba015c1b55aa4e5caaf5b2c2cb823fc140c728594f93a64f22ad73fe7dc7fd5e296"
+      }
+    },
+    {
+      "name": "deposit-tx-robinhood",
+      "function": "eip1559",
+      "args": [
+        4663,
+        1,
+        "1000000000",
+        "30000000000",
+        120000,
+        "0x94bAB9693Ba2f6358507eFfcbd372b0660AFfF9d",
+        "0",
+        "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960"
+      ],
+      "calldata": "0x8a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960",
+      "tx": {
+        "hash": "0x1dde99bf6a4070d0b2b46ee0c60369d1696e8051b23bb22fa81b9daaae239a35",
+        "raw": "0x02f8f382123701843b9aca008506fc23ac008301d4c09494bab9693ba2f6358507effcbd372b0660afff9d80b8848a857083000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001851960c001a0d7711a0c6aed613862b28762e29c69c8dcd7ce7c919b1253bd5964f09ec377b8a052d852121ffd51d171592d127b90bf37474b8a70c03267a937224f907be65ee1"
+      }
+    }
+  ]
+}

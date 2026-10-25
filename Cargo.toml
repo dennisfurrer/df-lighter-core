@@ -1,0 +1,54 @@
+[workspace]
+resolver = "3"
+members = ["packages/core"]
+
+[workspace.package]
+version = "0.0.1-beta"
+edition = "2024"
+rust-version = "1.94"
+license = "BUSL-1.1"
+authors = ["Dennis Furrer"]
+homepage = "https://dfurrer.com"
+readme = "README.md"
+keywords = ["lighter", "zklighter", "perps", "trading", "sdk"]
+categories = ["api-bindings", "cryptography::cryptocurrencies", "wasm"]
+
+[workspace.dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+thiserror = "2.0.21"
+k256 = { version = "0.13.4", features = ["ecdsa"] }
+# `parallel` exposes the two-lane form of the ARMv8.2 path: two states for the price of one.
+keccak = { version = "0.2.2", features = ["parallel"] }
+zeroize = "1.9.0"
+# Schnorr nonces and new API keys; on wasm32 it needs the js backend.
+getrandom02 = { package = "getrandom", version = "0.2.17", features = ["js"] }
+
+reqwest = { version = "0.12.28", default-features = false, features = ["rustls-tls", "http2"] }
+tokio = { version = "1.53.1", default-features = false }
+tokio-tungstenite = { version = "0.29.0", features = ["rustls-tls-webpki-roots"] }
+futures-util = { version = "0.3.34", default-features = false, features = ["std", "sink"] }
+
+# Exact: the wasm-bindgen CLI and test runner must match.
+wasm-bindgen = "=0.2.129"
+wasm-bindgen-futures = "0.4.79"
+js-sys = "0.3.106"
+web-sys = "0.3.106"
+wasm-bindgen-test = "=0.3.79"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unsafe_op_in_unsafe_fn = "deny"
+unused_must_use = "deny"
+
+[workspace.lints.clippy]
+# Prices and sizes are exact decimals.
+float_arithmetic = "deny"
+# A panic kills a Worker isolate or the browser app.
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"
+dbg_macro = "deny"
+float_cmp = "warn"

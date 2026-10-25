@@ -1,0 +1,8 @@
+{"session_id":"ef82e0e4-40e2-47fb-95fa-79bdacf29d1b","type":"connected"}
+{"channel":"height","height":365183072,"timestamp":1792921472656,"type":"subscribed/height"}
+{"error":{"code":30003,"message":"Already Subscribed to : height"}}
+{"channel":"height","height":365183075,"timestamp":1792921473156,"type":"update/height"}
+{"type": "unsubscribed", "channel": "height"}
+{"error":{"code":30002,"message":"Not Subscribed to : height"}}
+{"error":{"code":20001,"message":"invalid param : auth field is required: account_all_orders:10"}}
+{"bo_market_stats":{"symbol":"BTC-UPDOWN-15M-1792920600","market_id":5218,"mid_price":"","best_ask_price":"","best_bid_price":"0.01","last_trade_price":"0.84","daily_base_token_volume":72.4046,"daily_quote_token_volume":43.650536,"daily_price_low":0.42,"daily_price_high":0.84,"daily_price_change":0,"lifetime_quote_token_volume":43.650536,"lifetime_base_token_volume":72.4046,"open_interest":"52.4046","status":"active","outcome":0},"channel":"bo_market_stats:5218","timestamp":1792921475619,"type":"subscribed/bo_market_stats"}
